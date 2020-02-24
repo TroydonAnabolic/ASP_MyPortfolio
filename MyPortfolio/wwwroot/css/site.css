@@ -1,0 +1,167 @@
+﻿/* ==========================================================================
+  Main StyleSheet
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   Color Pallete
+   --------------
+
+   #262626: Dark background
+
+   Fonts
+   -----
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Anton', sans-serif;
+   ------------------------------------------------------------------------- */
+
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+/* -------------------------------------------------------------------------
+   Global Styles
+   ------------------------------------------------------------------------- */
+/*
+ * Sets all default padding and margin to 0
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* We set flexbox to align the contents in a column. The elements should stretch so that they span the whole width, and not just the width their contents take up. */
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/* flex-grow: 1 on main makes it grow to fill the available space. This puts the footer at the bottom, since main takes up all the space in the middle. */
+main {
+    flex-grow: 1;
+}
+
+/* stops the items from shrinking if there is not enough space, which happens if the content is larger than the screen, this happens as flex : 1 is default and triggers it */
+header, main, footer {
+    flex-shrink: 0;
+}
+
+/* -------------------------------------------------------------------------
+   Header
+   ------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------
+    Gate
+   ------------------------------------------------------------------------- */
+a:link.open_close_doors {
+    text-decoration: none;
+}
+
+a:visited.open_close_doors {
+    text-decoration: none;
+}
+
+a:hover.open_close_doors {
+    text-decoration: none;
+    color: grey;
+}
+
+a:active.open_close_doors {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+img {
+    border: none;
+}
+
+#wrapper {
+    background: url("../images/brick-wall.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#leftdoor_inner {
+    background-color: #f000d7;
+    width: 122px;
+    height: 244px;
+    opacity: 0.75;
+    margin: auto;
+    top: 76px;
+    left: -61px;
+    position: relative;
+    z-index: 2;
+}
+
+#leftdoor_outer {
+    background-color: #ffea00;
+    width: 122px;
+    height: 244px;
+    opacity: 0.75;
+    margin: auto;
+    top: -168px;
+    left: -151px;
+    position: relative;
+    z-index: 1;
+}
+
+#rightdoor_inner {
+    background-color: #f000d7;
+    width: 122px;
+    height: 244px;
+    opacity: 0.75;
+    margin: auto;
+    top: -412px;
+    left: 61px;
+    position: relative;
+    z-index: 2;
+}
+
+#rightdoor_outer {
+    background-color: #ffea00;
+    width: 122px;
+    height: 244px;
+    opacity: 0.75;
+    margin: auto;
+    top: -656px;
+    left: 151px;
+    position: relative;
+    z-index: 1;
+}
+
+.open_close_doors {
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    z-index: 4;
+}
