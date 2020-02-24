@@ -109,6 +109,7 @@ img {
     background-size: auto 100%;
     width: 100% !important;
     height: 100% !important;
+    flex-direction: row;
 }
 
 #leftdoor_inner {
@@ -116,11 +117,10 @@ img {
     width: 122px;
     height: 244px;
     opacity: 0.75;
-    margin: auto;
-    top: 76px;
-    left: -61px;
+
     position: relative;
     z-index: 2;
+    flex-direction: row;
 }
 
 /*#leftdoor_outer {
@@ -140,11 +140,10 @@ img {
     width: 122px;
     height: 244px;
     opacity: 0.75;
-    margin: auto;
-    top: -412px;
-    left: -122px;
     position: relative;
     z-index: 2;
+    flex-direction: row;
+    align-items: center;
 }
 
 /*#rightdoor_outer {
