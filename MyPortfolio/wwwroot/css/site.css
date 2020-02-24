@@ -123,7 +123,7 @@ img {
     z-index: 2;
 }
 
-#leftdoor_outer {
+/*#leftdoor_outer {
     background-color: #ffea00;
     width: 122px;
     height: 244px;
@@ -133,7 +133,7 @@ img {
     left: -151px;
     position: relative;
     z-index: 1;
-}
+}*/
 
 #rightdoor_inner {
     background-color: #f000d7;
@@ -142,12 +142,12 @@ img {
     opacity: 0.75;
     margin: auto;
     top: -412px;
-    left: 61px;
+    left: -122px;
     position: relative;
     z-index: 2;
 }
 
-#rightdoor_outer {
+/*#rightdoor_outer {
     background-color: #ffea00;
     width: 122px;
     height: 244px;
@@ -157,7 +157,7 @@ img {
     left: 151px;
     position: relative;
     z-index: 1;
-}
+}*/
 
 .open_close_doors {
     position: absolute;
