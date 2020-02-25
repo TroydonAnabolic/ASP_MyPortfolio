@@ -102,61 +102,70 @@ img {
     border: none;
 }
 
-#wrapper {
+#brick-wall {
+    background-color: #262626;
+    width: 100% !important;
+    height: 100% !important;
+    flex-direction: row;
+    flex-shrink: 1;
+}
+
+#leftdoor_inner {
+    background: url(../images/gate-left.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    height: 100%;
+    top: 0%; /*left and top were used to position elements over each other*/
+    left: 10%;
+    position: relative;
+    z-index: 2;
+}
+
+#leftdoor_outer {
+    background: url(../images/brick-wall.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 50%;
+    height: 100%; /*100% of parent element size*/
+    opacity: 0.75;
+     /*margin: auto; */
+     top: -100%; 
+     left: 0;
+    position: relative;
+    z-index: 1;
+}
+
+#rightdoor_inner {
+    background: url("../images/gate-right.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    height: 100%;
+    /*margin: auto; */
+    top: -200%;
+    left: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+#rightdoor_outer {
     background: url("../images/brick-wall.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    width: 100% !important;
-    height: 100% !important;
-    flex-direction: row;
-}
-
-#leftdoor_inner {
-    background-color: #f000d7;
-    width: 122px;
-    height: 244px;
+    width: 50%;
+    height: 100%; /*100% of parent element size*/
     opacity: 0.75;
-
-    position: relative;
-    z-index: 2;
-    flex-direction: row;
-}
-
-/*#leftdoor_outer {
-    background-color: #ffea00;
-    width: 122px;
-    height: 244px;
-    opacity: 0.75;
-    margin: auto;
-    top: -168px;
-    left: -151px;
+    /*margin: auto; */
+    top: -300%;
+    left: 50%;
     position: relative;
     z-index: 1;
-}*/
-
-#rightdoor_inner {
-    background-color: #f000d7;
-    width: 122px;
-    height: 244px;
-    opacity: 0.75;
-    position: relative;
-    z-index: 2;
-    flex-direction: row;
-    align-items: center;
 }
-
-/*#rightdoor_outer {
-    background-color: #ffea00;
-    width: 122px;
-    height: 244px;
-    opacity: 0.75;
-    margin: auto;
-    top: -656px;
-    left: 151px;
-    position: relative;
-    z-index: 1;
-}*/
 
 .open_close_doors {
     position: absolute;
