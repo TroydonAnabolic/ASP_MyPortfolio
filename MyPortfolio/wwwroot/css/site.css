@@ -45,6 +45,10 @@ img {
     border: none;
 }
 
+.hidden {
+    display: none !important;
+}
+
 /* We set flexbox to align the contents in a column. The elements should stretch so that they span the whole width, and not just the width their contents take up. */
 
 body {
@@ -177,7 +181,7 @@ a:active.open_close_doors {
     text-align: center;
 }
 
-#rightdoor_open {
+.rightdoor_open {
     background: url("../images/gate-open-right.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -191,7 +195,7 @@ a:active.open_close_doors {
     z-index: 2;
 }
 
-#leftdoor_open {
+.leftdoor_open {
     background: url("../images/gate-open-left.png");
     background-position: center center;
     background-repeat: no-repeat;
