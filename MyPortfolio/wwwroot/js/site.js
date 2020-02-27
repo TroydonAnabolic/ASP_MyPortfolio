@@ -19,9 +19,11 @@ $(".open_close_doors").click(function () {
     $("#rightdoor_outer").animate({ "left": "+=100%" }, "slow");
     // remove the closed gates from display
     $(".open_close_doors").addClass("hidden");
+    $("#leftdoor_inner").addClass("hidden");
+    $("#rightdoor_inner").addClass("hidden");
 
     // add the hidden class to the closed doors image
-    $("#rightdoor_open").addClass("rightdoor_open").delay(2000).queue(function (next) {
+    $("#rightdoor_open").addClass("rightdoor_open").delay(3000).queue(function (next) {
         $(this).removeClass("rightdoor_open");
         next();
     });

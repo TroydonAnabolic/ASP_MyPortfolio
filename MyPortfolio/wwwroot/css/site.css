@@ -46,7 +46,10 @@ img {
 }
 
 .hidden {
-    display: none !important;
+    /*display: none !important;*/
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
 }
 
 /* We set flexbox to align the contents in a column. The elements should stretch so that they span the whole width, and not just the width their contents take up. */
@@ -112,7 +115,7 @@ a:active.open_close_doors {
     height: 100% !important;
     flex-direction: row;
     flex-shrink: 1;
-    
+    /*overflow: hidden; /*overflow hidden prevents the wall from moving out of the viewport*/
 }
 
 #leftdoor_inner {
