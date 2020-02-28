@@ -7,6 +7,8 @@
    --------------
 
    #262626: Dark background
+    #737373: Main text color
+
 
    Fonts
    -----
@@ -62,6 +64,8 @@ body {
 /* flex-grow: 1 on main makes it grow to fill the available space. This puts the footer at the bottom, since main takes up all the space in the middle. */
 main {
     flex-grow: 1;
+    background-color: #262626;
+    color: #737373;
 }
 
 /* stops the items from shrinking if there is not enough space, which happens if the content is larger than the screen, this happens as flex : 1 is default and triggers it */
@@ -109,7 +113,7 @@ a:active.open_close_doors {
 }
 
 #brick-wall {
-    background-color: #262626;
+    
     width: 100% !important;
     height: 100% !important;
     flex-direction: row;
@@ -208,3 +212,7 @@ a:active.open_close_doors {
     position: relative;
     z-index: 2;
 }
+
+/* -------------------------------------------------------------------------
+    Biography page
+   ------------------------------------------------------------------------- */
