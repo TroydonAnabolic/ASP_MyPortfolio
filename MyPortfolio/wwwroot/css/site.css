@@ -122,7 +122,6 @@ a:active.open_close_doors {
 }
 
 #brick-wall {
-    
     width: 100% !important;
     height: 100% !important;
     flex-direction: row;
@@ -151,9 +150,9 @@ a:active.open_close_doors {
     width: 50%;
     height: 100%; /*100% of parent element size*/
     opacity: 0.75;
-     /*margin: auto; */
-     top: -100%; 
-     left: 0;
+    /*margin: auto; */
+    top: -100%;
+    left: 0;
     position: relative;
     z-index: 1;
 }
@@ -237,8 +236,10 @@ article.bio {
 #bio-description {
     width: 60%;
     float: left;
-    padding: 5%;
+    padding: 5% 15%;
+}
 
+.bio section:nth-child(2) {
 }
 
 #bio-object {
@@ -246,6 +247,69 @@ article.bio {
     float: left;
     padding: 5%;
 }
+
+/*Animated object*/
+
+/* WebKit and Opera browsers */
+@-webkit-keyframes spinner {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+
+/* all other browsers */
+@keyframes spinner {
+    from {
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+
+    to {
+        -moz-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+    }
+}
+
+#stage {
+    margin: 1em auto;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+}
+
+.spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+    .spinner:hover {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
+
+    .spinner img {
+        position: absolute;
+        border: 1px solid #ccc;
+        background: rgba(255,255,255,0.8);
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    }
 
 /*TODO: Create animation for h1 titles and also animation for all the coding langugages i am familar with
     then a graph of the skill level
