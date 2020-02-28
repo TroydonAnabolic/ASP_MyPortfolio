@@ -31,17 +31,6 @@ $(".open_close_doors").click(function () {
         $(this).removeClass("leftdoor_open");
         next();
     });
-
-    // assign co-ordinates of the closed gate after it's class has been removed
-    //var right_close = document.getElementById('rightdoor_inner');
-    var right_open = document.getElementsByClassName('rightdoor_open');
-    right_open.style.left = right_close.style.left;
-    right_open.style.top = right_open.style.top;
-
-    //var left_close = document.getElementById('leftdoor_inner');
-    var left_open = document.getElementsByClassName('leftdoor_open');
-    left_open.style.left = left_close.style.left;
-    left_open.style.top = left_close.style.top;
 });
 
 
