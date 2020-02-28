@@ -32,7 +32,7 @@ $(".open_close_doors").click(function () {
         next();
     });
 
-    // assign co-ordinates of the closed gate after it's class has been removed
+    // assign co-ordinates of the closed gate after open class has been removed
     //var right_close = document.getElementById('rightdoor_inner');
     var right_open = document.getElementsByClassName('rightdoor_open');
     right_open.style.left = right_close.style.left;
