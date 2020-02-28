@@ -9,7 +9,7 @@ $(".open_close_doors").click(function () {
     $(function () {
         setTimeout(function () {
             window.location.href = "/Home/Bio";
-        }, 3000);
+        }, 2000);
     });
 
     // move the left and right gate-closed to outwards
@@ -23,11 +23,11 @@ $(".open_close_doors").click(function () {
     $("#rightdoor_inner").addClass("hidden");
 
     // add the hidden class to the closed doors image
-    $("#rightdoor_open").addClass("rightdoor_open").delay(3000).queue(function (next) {
+    $("#rightdoor_open").addClass("rightdoor_open").delay(2000).queue(function (next) {
         $(this).removeClass("rightdoor_open");
         next();
     });
-    $("#leftdoor_open").addClass("leftdoor_open").delay(3000).queue(function (next) {
+    $("#leftdoor_open").addClass("leftdoor_open").delay(2000).queue(function (next) {
         $(this).removeClass("leftdoor_open");
         next();
     });

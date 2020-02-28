@@ -7,7 +7,9 @@
    --------------
 
    #262626: Dark background
-    #737373: Main text color
+   #00ffcc: Main text color
+   #33ccff: Heading colors
+
 
 
    Fonts
@@ -65,12 +67,17 @@ body {
 main {
     flex-grow: 1;
     background-color: #262626;
-    color: #737373;
+    color: #00ffcc
 }
 
 /* stops the items from shrinking if there is not enough space, which happens if the content is larger than the screen, this happens as flex : 1 is default and triggers it */
 header, main, footer {
     flex-shrink: 0;
+}
+
+h1 {
+    padding: 2%;
+    color: #33ccff;
 }
 
 /* -------------------------------------------------------------------------
@@ -85,31 +92,32 @@ header, main, footer {
     Gate
    ------------------------------------------------------------------------- */
 
-a.open_close_doors
-{
+a.open_close_doors {
     font-size: 3rem;
-    font-family: Impact; 
-    opacity: 0.6;
+    font-family: Impact;
+    opacity: 0.8;
+    color: #33ccff;
+    -webkit-text-stroke-color: white;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 a:link.open_close_doors {
     text-decoration: none;
-    color: red;
 }
 
 a:visited.open_close_doors {
     text-decoration: none;
-    color: red;
 }
 
 a:hover.open_close_doors {
     text-decoration: none;
-    color: pink;
+    color: #99e6ff;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    opacity: 0.6;
 }
 
 a:active.open_close_doors {
     text-decoration: none;
-    color: red;
 }
 
 #brick-wall {
@@ -216,3 +224,9 @@ a:active.open_close_doors {
 /* -------------------------------------------------------------------------
     Biography page
    ------------------------------------------------------------------------- */
+
+article.bio {
+   
+    padding: 1%;
+    margin: 1%;
+}
