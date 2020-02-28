@@ -8,7 +8,7 @@ $(".open_close_doors").click(function () {
      //follow link after 6 seconds TODO: change link to BIO/About me instead of privacy after test
     $(function () {
         setTimeout(function () {
-            window.location.href = "/Home/Privacy";
+            window.location.href = "/Home/Bio";
         }, 3000);
     });
 
