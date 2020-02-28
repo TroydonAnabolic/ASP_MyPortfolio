@@ -253,27 +253,28 @@ article.bio {
 /* WebKit and Opera browsers */
 @-webkit-keyframes spinner {
     from {
-        -webkit-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg) rotateZ(30deg);
     }
 
     to {
-        -webkit-transform: rotateY(-360deg);
+        -webkit-transform: rotateY(-360deg) rotateZ(90deg);
     }
 }
 
 /* all other browsers */
 @keyframes spinner {
     from {
-        -moz-transform: rotateY(0deg);
-        -ms-transform: rotateY(0deg);
-        transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg) rotateZ(30deg);
+        -ms-transform: rotateY(0deg) rotateZ(30deg);
+        transform: rotateY(0deg) rotateZ(30deg);
     }
 
     to {
-        -moz-transform: rotateY(-360deg);
-        -ms-transform: rotateY(-360deg);
-        transform: rotateY(-360deg);
+        -moz-transform: rotateY(-360deg) rotateZ(-30deg);
+        -ms-transform: rotateY(-360deg) rotateZ(-30deg);
+        transform: rotateY(-360deg) rotateZ(-30deg);
     }
+
 }
 
 #stage {
