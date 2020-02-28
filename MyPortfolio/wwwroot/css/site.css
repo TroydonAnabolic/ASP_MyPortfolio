@@ -257,7 +257,7 @@ article.bio {
     }
 
     to {
-        -webkit-transform: rotateY(-360deg) rotateZ(90deg);
+        -webkit-transform: rotateY(360deg) rotateZ(90deg);
     }
 }
 
@@ -270,9 +270,9 @@ article.bio {
     }
 
     to {
-        -moz-transform: rotateY(-360deg) rotateZ(-30deg);
-        -ms-transform: rotateY(-360deg) rotateZ(-30deg);
-        transform: rotateY(-360deg) rotateZ(-30deg);
+        -moz-transform: rotateY(360deg) rotateZ(-30deg);
+        -ms-transform: rotateY(360deg) rotateZ(-30deg);
+        transform: rotateY(360deg) rotateZ(-30deg);
     }
 
 }
