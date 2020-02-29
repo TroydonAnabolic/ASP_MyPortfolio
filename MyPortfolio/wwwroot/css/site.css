@@ -101,8 +101,37 @@ h1 {
    ------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------
-   Footer
+   Main navigation
    ------------------------------------------------------------------------- */
+#main-nav {
+    background: linear-gradient(to left, #333, #333 30%, #eee 55%, #333 85%);
+    width: 2%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    min-height: 500px;
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    overflow: hidden;
+}
+
+#menu-button {
+    background: url(../images/menu-button.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    text-align: center;
+    position: absolute;
+    height: 210px;
+    top: 50%;
+    margin-top: -120px;
+    width: 100%;
+}
+
+/*stop bdo::after use javascript stop expand navbar when clicked button*/
 
 /* -------------------------------------------------------------------------
     Gate
@@ -287,7 +316,6 @@ article.bio {
         -ms-transform: rotateY(360deg) rotateZ(-30deg);
         transform: rotateY(360deg) rotateZ(-30deg);
     }
-
 }
 
 #stage {
