@@ -54,3 +54,9 @@ $("#menu-button").click(function () {
     });
 });
 
+$("#scroll").mouseenter(function () {
+    $("#scroll").addClass("scroll-up");
+    $("#scroll").mouseleave(function () {
+        $("#scroll").removeClass("scroll-up");
+    });
+});
