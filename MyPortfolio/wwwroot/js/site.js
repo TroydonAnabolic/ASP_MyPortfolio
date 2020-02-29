@@ -52,6 +52,5 @@ $("#menu-button").click(function () {
         $("#logo").css("font-size", "1rem");
         $("#menu-content").addClass("invisible");
     });
-
 });
 

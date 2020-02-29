@@ -110,12 +110,13 @@ h1 {
    Main navigation
    ------------------------------------------------------------------------- */
 #main-nav {
-    background:linear-gradient(to left, #333333 0%, #0d0d0d 100%);
+    background: linear-gradient(to left, #333333 0%, #0d0d0d 100%);
     width: 2%;
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
+    bottom: 0;
     z-index: 3;
     min-height: 500px;
     transition: width 0.5s;
@@ -136,6 +137,8 @@ h1 {
     margin-top: -120px;
     width: 100%;
 }
+
+
 
 #logo {
     font-family: 'Monoton';
@@ -209,7 +212,7 @@ div.circleBehind a:hover:after {
     Gate
    ------------------------------------------------------------------------- */
     a .open_close_doors {
-    font-size: 3rem;
+    font-size: 5rem;
     font-family: Impact;
     opacity: 0.8;
     color: #33ccff;
@@ -352,14 +355,17 @@ article.bio {
     padding: 5% 15%;
 }
 
+    #bio-description p {
+        padding: 1%;
+    }
 
-#bio-object {
-    width: 40%;
-    float: left;
-    padding: 5%;
-}
+    #bio-object {
+        width: 40%;
+        float: left;
+        padding: 5%;
+    }
 
-/*Animated object*/
+
 
 /* WebKit and Opera browsers */
 @-webkit-keyframes spinner {
@@ -386,6 +392,8 @@ article.bio {
         transform: rotateY(360deg) rotateZ(-30deg);
     }
 }
+
+/* Spinning object */
 
 #stage {
     margin: 1em auto;
