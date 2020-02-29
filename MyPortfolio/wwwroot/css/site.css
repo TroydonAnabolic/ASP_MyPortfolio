@@ -76,10 +76,23 @@ header, main, footer {
 }
 
 h1 {
-    padding: 2%;
     margin: 3% 10% 1%;
+    margin-top: 5%;
+    font-size: 8rem;
     color: #33ccff;
 }
+
+    h1:hover {
+        background-image: url(https://media.giphy.com/media/3bc8pP1rVdfgN1uoMV/giphy.gif);
+        background-size: cover;
+        color: transparent;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
+        text-transform: uppercase;
+        font-size: 8rem;
+        margin: 3% 10% 1%;
+        margin-top: 5%;
+    }
 
 /* -------------------------------------------------------------------------
    Header
@@ -225,12 +238,10 @@ a:active.open_close_doors {
     Biography page
    ------------------------------------------------------------------------- */
 
-
-
 article.bio {
     margin: 0 2%;
     padding: 40px 20px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #bio-description {
