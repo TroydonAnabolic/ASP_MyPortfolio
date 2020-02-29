@@ -33,4 +33,23 @@ $(".open_close_doors").click(function () {
     });
 });
 
+// When we click the power icon we expand the menu bar to show the menu items 
+$("#menu-button").click(function () {
+    $("#main-nav").css("width", "5%");
+    $("#menu-button").hide("fast");
+    $("#logo").css("font-size", "2rem");
+
+    // after clicking, we make the mouse button appear again each time it leaves menu
+    $("#main-nav").mouseenter(function () {
+        $("#menu-button").show("fast");
+    });
+
+    // each time the mouse leaves we shrink the menu bar and show the button again
+    $("#main-nav").mouseleave(function () {
+        $("#main-nav").css("width", "2%");
+        $("#menu-button").show("fast");
+        $("#logo").css("font-size", "1rem");
+    });
+
+});
 

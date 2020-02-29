@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-        <header>
-            @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+    <header>
+        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
                 <div class="container">
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyPortfolio</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -29,26 +29,29 @@
                 </div>
             </nav>*@
 
-            <nav id="main-nav">
-                <div id="menu-button">
+        <nav id="main-nav">
+            <div id="menu-button">
+            </div>
+            <div id="menu-content">
+                <div id="logo">TL</div>
+            </div>
+        </nav>
 
-                </div>
-            </nav>
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
 
-        </header>
-            <main role="main">
-                @RenderBody()
-            </main>
-
-        @*<footer class="border-top footer text-muted">
+    @*<footer class="border-top footer text-muted">
 
             <div class="container">
                 &copy; 2020 - MyPortfolio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
         </footer>*@
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        @RenderSection("Scripts", required: false)
+    <script src="https://kit.fontawesome.com/199919a52c.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

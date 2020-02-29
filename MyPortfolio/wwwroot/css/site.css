@@ -29,6 +29,8 @@ for details on configuring this project to bundle and minify static web assets. 
 /*
  * Sets all default padding and margin to 0
  */
+@import url('https://fonts.googleapis.com/css?family=Monoton|Roboto+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -67,7 +69,8 @@ body {
 main {
     flex-grow: 1;
     background-color: #262626;
-    color: #00ffcc
+    color: #00ffcc;
+    font-family: 'Roboto Mono';
 }
 
 /* stops the items from shrinking if there is not enough space, which happens if the content is larger than the screen, this happens as flex : 1 is default and triggers it */
@@ -104,7 +107,7 @@ h1 {
    Main navigation
    ------------------------------------------------------------------------- */
 #main-nav {
-    background: linear-gradient(to left, #333, #333 30%, #eee 55%, #333 85%);
+    background:linear-gradient(to left, #333333 0%, #0d0d0d 100%);
     width: 2%;
     height: 100%;
     position: absolute;
@@ -131,7 +134,14 @@ h1 {
     width: 100%;
 }
 
-/*stop bdo::after use javascript stop expand navbar when clicked button*/
+#logo {
+    font-family: 'Monoton';
+    font-size: 1rem;
+    background-color: #8c8c8c;
+    text-align: center;
+}
+
+/*TODO:: make font for logo bigger when button clicked*/
 
 /* -------------------------------------------------------------------------
     Gate
