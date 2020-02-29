@@ -51,10 +51,13 @@ img {
 }
 
 .hidden {
-    /*display: none !important;*/
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.invisible {
+    display: none !important;
 }
 
 /* We set flexbox to align the contents in a column. The elements should stretch so that they span the whole width, and not just the width their contents take up. */
@@ -145,19 +148,67 @@ h1 {
 #menu-content {
     text-align: center;
     position: absolute;
-    height: 210px;
-    top: 80%;
+    height: 350px;
+    top: 50%;
     margin-top: -120px;
     width: 100%;
 }
 
+div.containerz a {
+    color: #FFF;
+    text-decoration: none;
+    z-index: -2;
+    padding: 5px 5px;
+    cursor: pointer;
+    background: #2196f3;
+    max-width: 100%;
 
+}
 
-/* -------------------------------------------------------------------------
+#menu-content ul {
+    list-style-type: none;
+}
+
+    #menu-content ul li {
+        margin: 3rem 0;
+        max-width: 100%;
+        line-height: 0.5;
+    }
+
+/* Circle behind */
+div.circleBehind a:before, div.circleBehind a:after {
+    position: absolute;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #0277bd;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+div.circleBehind a:after {
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+    /* -------------------------------------------------------------------------
     Gate
    ------------------------------------------------------------------------- */
-
-a.open_close_doors {
+    a .open_close_doors {
     font-size: 3rem;
     font-family: Impact;
     opacity: 0.8;
@@ -301,8 +352,6 @@ article.bio {
     padding: 5% 15%;
 }
 
-.bio section:nth-child(2) {
-}
 
 #bio-object {
     width: 40%;

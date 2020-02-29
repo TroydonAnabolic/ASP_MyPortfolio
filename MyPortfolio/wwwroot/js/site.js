@@ -38,6 +38,7 @@ $("#menu-button").click(function () {
     $("#main-nav").css("width", "5%");
     $("#menu-button").hide("fast");
     $("#logo").css("font-size", "2rem");
+    $("#menu-content").removeClass("invisible");
 
     // after clicking, we make the mouse button appear again each time it leaves menu
     $("#main-nav").mouseenter(function () {
@@ -49,6 +50,7 @@ $("#menu-button").click(function () {
         $("#main-nav").css("width", "2%");
         $("#menu-button").show("fast");
         $("#logo").css("font-size", "1rem");
+        $("#menu-content").addClass("invisible");
     });
 
 });
