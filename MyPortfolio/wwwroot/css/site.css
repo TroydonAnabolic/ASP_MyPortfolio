@@ -29,7 +29,7 @@ for details on configuring this project to bundle and minify static web assets. 
 /*
  * Sets all default padding and margin to 0
  */
-@import url('https://fonts.googleapis.com/css?family=Monoton|Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Monoton|Roboto+Mono|Orbitron:700&display=swap');
 
 * {
     margin: 0;
@@ -147,7 +147,6 @@ h1 {
     text-align: center;
 }
 
-/*TODO:: make the font invisible using jquery until the button is clicked*/
 #menu-content {
     text-align: center;
     position: absolute;
@@ -493,6 +492,77 @@ article.bio {
         box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
     }
 
-/*TODO: Create animation for h1 titles and also animation for all the coding langugages i am familar with
-    then a graph of the skill level
-*/
+/* -------------------------------------------------------------------------
+  Skills page
+   ------------------------------------------------------------------------- */
+
+/*Some of the falling word idea is used from the falling snow sample on https://www.claytabase.co.uk/Web-Site-Design-Services/Technical-Articles/Using-CSS/Create-Falling-Objects-in-CSS by Gavin clayton*/ 
+
+#skills {
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.snowContainer {
+
+    background-color: black;
+    overflow: hidden;
+
+}
+
+.skillWords {
+    position: absolute;
+    top: -450px;
+    opacity: .5;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Orbitron';
+    animation: skillWordsSlide ease-in infinite;
+    -webkit-animation: skillWordsSlide ease-in infinite;
+    -moz-animation: skillWordsSlide ease-in infinite;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skillWordsSlide {
+    from {
+        position: absolute;
+        top: -10%;
+    }
+
+    to {
+        position: absolute;
+        top: 100%;
+    }
+}
+
+@-webkit-keyframes skillWordsSlide {
+    from {
+        position: absolute;
+        top: -10%;
+    }
+
+    to {
+        position: absolute;
+        top: 100%;
+    }
+}
+
+@-moz-keyframes skillWordsSlide {
+    from {
+        position: absolute;
+        top: -10%;
+    }
+
+    to {
+        position: absolute;
+        top: 100%;
+    }
+}
