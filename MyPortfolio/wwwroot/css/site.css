@@ -165,8 +165,8 @@ div.containerz a {
     cursor: pointer;
     background: #2196f3;
     max-width: 100%;
-    border: 1px solid white;
-    box-shadow: 1px 1px;
+    border: 1px solid grey;
+    box-shadow: 1px 1px inherit;
     border-radius: 10%;
 }
 
