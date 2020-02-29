@@ -356,6 +356,7 @@ article.bio {
     line-height: 2rem;
 }
 
+/*This scrolling animation is a modification of the code posted on this blod: https://www.positronx.io/create-css-scrolling-text-effects-marquee/ by Djamber*/ 
 .scroll-up {
     overflow: hidden;
     position: relative;
