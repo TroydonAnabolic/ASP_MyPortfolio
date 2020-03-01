@@ -519,6 +519,7 @@ article.bio {
 .skillWords {
     position: absolute;
     top: -450px;
+    color: #00ffff;
     opacity: .5;
     text-align: center;
     text-transform: uppercase;
