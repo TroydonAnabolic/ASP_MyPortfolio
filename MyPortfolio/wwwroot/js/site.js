@@ -35,7 +35,7 @@ $(".open_close_doors").click(function () {
 
 // When we click the power icon we expand the menu bar to show the menu items 
 $("#menu-button").click(function () {
-    $("#main-nav").css("width", "5%");
+    $("#main-nav").css("width", "7%");
     $("#menu-button").hide("fast");
     $("#logo").css("font-size", "2rem");
     $("#menu-content").removeClass("invisible");

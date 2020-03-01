@@ -18,7 +18,7 @@
                     <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
                     <li><a asp-controller="Home" asp-action="Bio">BIO</a></li>
                     <li><a asp-controller="Home" asp-action="Skills">SKILLS</a></li>
-                    <li><a asp-controller="Home" asp-action="Projects">My Projects</a></li>
+                    <li><a asp-controller="Home" asp-action="Projects">PROJECTS</a></li>
                     <li><a asp-controller="Home" asp-action="Contact">CONTACT</a></li>
                 </ul>
             </div>
@@ -26,7 +26,12 @@
 
     </header>
     <main role="main">
+        @if (IsSectionDefined("SpecialOther"))
+        {
+            @RenderSection("SpecialOther")
+        }
         @RenderBody()
+
     </main>
 
     @*<footer class="border-top footer text-muted">
