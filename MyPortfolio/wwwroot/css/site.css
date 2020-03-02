@@ -569,7 +569,7 @@ article.bio {
 }
 
 
-/*Slider animation*/
+/*Projects Slider animation*/
 
 img {
     vertical-align: middle;
@@ -578,6 +578,9 @@ img {
 /* Position the image container (needed to position the left and right arrows) */
 .container {
     position: relative;
+    box-sizing: border-box;
+    margin: 3rem auto;
+    width: 40%;
 }
 
 /* Hide the images by default */
@@ -631,9 +634,16 @@ img {
 /* Container for image text */
 .caption-container {
     text-align: center;
-    background-color: #222;
+    background-color: black;
     padding: 2px 16px;
     color: white;
+}
+
+.row {
+    width: 100%;
+    text-align: center;
+    left: 0;
+    margin: 0;
 }
 
 .row:after {
