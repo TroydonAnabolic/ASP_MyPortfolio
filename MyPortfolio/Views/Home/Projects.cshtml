@@ -13,44 +13,92 @@
 
 @*File is sample from W3 schools at: https://codepen.io/bcarvalho/pen/WXmwBq*@
 
-<div class="container">
+<div class="container ">
+    @*Main pictures*@
     <div class="mySlides">
         <div class="numbertext">1 / 6</div>
+        <a href="https://github.com/TroydonAnabolic/TroydonFitness">
+            <div class="image-description invisible">
+                Description: An ASP.NET Core personal training website where you can purchase goods and services.
+                Services include personal training, exercise and diet prescription. Goods include training equipment and supplements.
+                There is an option to create a user account to manage purchased goods and services e.g A purchased exercise routine can be
+                saved to the user profile to track and monitor exercises. <br />
+                https://github.com/TroydonAnabolic/TroydonFitness
+            </div>
+        </a>
         <img src="~/images/gym.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">2 / 6</div>
+        <a href="https://github.com/TroydonAnabolic/MyCSharpQuizAnswers">
+
+            <div class="image-description invisible">
+                Description: A text file with various answers to some basic C# Questions, most of which was my variant, using .NET Core. <br />
+                https://github.com/TroydonAnabolic/MyCSharpQuizAnswers
+            </div>
+        </a>
         <img src="~/images/cSharpQuiz.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">3 / 6</div>
-        <img src="~/images/resume.jpg" style="width:100%">
+        <a href="https://github.com/TroydonAnabolic/Troydon-Resume-NET-Core">
+
+            <div class="image-description invisible">
+                Description: A simple ASP.NET Core website that contains a website resume.<br />
+                https://github.com/TroydonAnabolic/Troydon-Resume-NET-Core
+            </div>
+            <img src="~/images/resume.jpg" style="width:100%">
+        </a>
     </div>
 
     <div class="mySlides">
         <div class="numbertext">4 / 6</div>
-        <img src="~/images/dragon.jpg" style="width:100%">
+        <a href="https://github.com/TroydonAnabolic/InfernalDragons">
+            <div class="image-description invisible">
+                Description: An RPG Game I am currently working on periodically whilst following a Udemy tutorial.
+                Currently using Unity 3D technologies with C# and making my own algorithm variations sometimes.
+                https://github.com/TroydonAnabolic/InfernalDragons
+            </div>
+            <img src="~/images/dragon.jpg" style="width:100%">
+        </a>
     </div>
 
     <div class="mySlides">
         <div class="numbertext">5 / 6</div>
+        <a href="https://github.com/TroydonAnabolic/BirdGame">
+            <div class="image-description invisible">
+                Description: A simple Bird game program that involves flying a bird around. The bird can fly only when it has a certain
+                Health point, and travels alot faster. Currently written in Java.
+                https://github.com/TroydonAnabolic/BirdGame
+            </div>
+        </a>
         <img src="~/images/bird.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
         <div class="numbertext">6 / 6</div>
+        <a href="https://github.com/TroydonAnabolic/BirdGame">
+            <div class="image-description invisible">
+                Description: A Space Invaders game I followed off a tutorial and made minor adjustments to <br />
+                https://github.com/TroydonAnabolic/SpaceInavdersTutorial
+            </div>
+        </a>
         <img src="~/images/spaceship.jpg" style="width:100%">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
 
+    @*Slide caption*@
+
+
     <div class="caption-container">
         <p id="caption"></p>
     </div>
 
+    @*Preview slides*@
     <div class="row">
         <div class="column">
             <img class="demo cursor" src="~/images/gym.jpg" style="width:100%" onclick="currentSlide(1)" alt="Troydon Fitness">
@@ -72,46 +120,3 @@
         </div>
     </div>
 </div>
-
-<ul>
-    <li>
-        <p>Troydon Fitness</p>
-        <p>
-            Description: An ASP.NET Core personal training website where you can purchase goods and services.
-            Services include personal training, exercise and diet prescription. Goods include training equipment and supplements.
-            There is an option to create a user account to manage purchased goods and services e.g A purchased exercise routine can be
-            saved to the user profile to track and monitor exercises. <br />
-            https://github.com/TroydonAnabolic/TroydonFitness
-        </p>
-    </li>
-    <li>
-        <p>C# Quizzes</p>
-        <p>
-            Description: A text file with various answers to some basic C# Questions, most of which was my variant, using .NET Core. <br />
-            https://github.com/TroydonAnabolic/MyCSharpQuizAnswers
-        </p>
-    </li>
-    <li>
-        <p>ASP Resume</p>
-        <p>
-            Description: A simple ASP.NET Core website that contains a website resume.<br />
-            https://github.com/TroydonAnabolic/Troydon-Resume-NET-Core
-        </p>
-    </li>
-    <li>
-        <p>Infernal Dragons</p>
-        <p>
-            Description: An RPG Game I am currently working on periodically whilst following a Udemy tutorial.
-            Currently using Unity 3D technologies with C# and making my own algorithm variations sometimes.
-        </p>
-    </li>
-    <li>
-        <p>Bird Game</p>
-        <p>
-            Description: A simple Bird game program that involves flying a bird around. The bird can fly only when it has a certain
-            Health point, and travels alot faster. Currently written in Java.
-        </p>
-    </li>
-
-    Space Invaders
-</ul>
