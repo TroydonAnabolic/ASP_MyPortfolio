@@ -1,3 +1,14 @@
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #262626;
+  height: 100%;
+  width: 100%;
+  z-index: 999999; }
+
 .loader {
   width: 250px;
   height: 50px;
@@ -10,16 +21,18 @@
   font-family: helvetica, arial, sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  color: #ce4233;
-  letter-spacing: 0.2em; }
-  .loader::before, .loader::after {
-    content: "";
-    display: block;
-    width: 15px;
-    height: 15px;
-    background: #ce4233;
-    position: absolute;
-    animation: load .7s infinite alternate ease-in-out; }
+  color: #00ff55;
+  letter-spacing: 0.2em;
+  z-index: 5; }
+    .loader::before, .loader::after {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: #00ff55;
+        position: absolute;
+        animation: load .7s infinite alternate ease-in-out;
+    }
   .loader::before {
     top: 0; }
   .loader::after {
