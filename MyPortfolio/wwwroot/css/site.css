@@ -118,8 +118,8 @@ h1 {
     right: 0;
     bottom: 0;
     z-index: 3;
-    min-height: 800px;
-    max-height: 800px;
+    min-height: 100%;
+    max-height: 100%;
     transition: width 0.5s;
     -webkit-transition: width 0.5s;
     overflow: hidden;
@@ -581,8 +581,9 @@ img {
     position: relative;
     box-sizing: border-box;
     margin: 3rem auto;
-    width: 40%;
+    width: 36%;
     text-align: center;
+
 }
 
 /* Hide the images by default */

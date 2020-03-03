@@ -27,7 +27,11 @@
 
     </header>
     <main role="main">
-        <div id="pre-loader"></div>
+        @*<div class="loader">Loading...</div>*@
+        <div id="content">
+            <div id="loading"></div>
+            <div id="isItLoaded"></div>
+        </div>
         @*try using invisible class if this does not work*@
 
         @if (IsSectionDefined("SpecialOther"))
