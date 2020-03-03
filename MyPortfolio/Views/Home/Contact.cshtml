@@ -3,53 +3,56 @@
     ViewData["Title"] = "Contact";
 }
 
-<h1>Contact Me</h1>
-<h3> Get in Touch</h3>
-<h6 id="test"> Please fill in the form to get in touch with me!</h6>
+<h1 style="z-index:10;">Contact Me</h1>
+<div id="earth-bg">
+</div>
+<article id="contact">
 
 
-<article id="contact" class="container">
+    <div class="container">
+        <h3> Get in Touch</h3>
+        <h6 id="test"> Please fill in the form to get in touch with me!</h6>
 
+        @*box to get blue flames to activate when hovered over contact box*@
+        <div id="form-wrap">
 
-    @*box to get blue flames to activate when hovered over contact box*@
-    <div id="form-wrap">
+            <form action="post" class="border-button">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <form action="post" class="border-button">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label">Your First Name</label>
+                    <input type="text" value="e.g John" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label class="control-label">Your First Name</label>
-                <input type="text" value="e.g John" class="form-control" />
-                <span class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label class="control-label">Your Last Name</label>
+                    <input type="text" value="e.g Connor" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label class="control-label">Your Last Name</label>
-                <input type="text" value="e.g Connor" class="form-control" />
-                <span class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label class="control-label">Your Email</label>
+                    <input type="email" value="e.g someone@gmail.com" class="form-control" required />
+                    <span class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label class="control-label">Your Email</label>
-                <input type="email" value="e.g someone@gmail.com" class="form-control" required />
-                <span class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label class="control-label">Your contact Number</label>
+                    <input type="tel" value="04000000000" class="form-control" />
+                    <span class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label class="control-label">Your contact Number</label>
-                <input type="tel" value="04000000000" class="form-control" />
-                <span class="text-danger"></span>
-            </div>
+                <div class="form-group">
+                    <label class="control-label">Your Message</label>
+                    <textarea placeholder="Write your message here" class="form-control"></textarea>
+                    <span class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label class="control-label">Your Message</label>
-                <textarea placeholder="Write your message here" class="form-control"></textarea>
-                <span class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Submit" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
 </article>

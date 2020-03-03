@@ -126,13 +126,13 @@ body.loaded .fadein {
     background: linear-gradient(to left, #333333 0%, #0d0d0d 100%);
     width: 2%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 10;
     min-height: 100%;
-    max-height: 100%;
+    /*max-height: 100%;*/
     transition: width 0.5s;
     -webkit-transition: width 0.5s;
     overflow: hidden;
@@ -717,23 +717,37 @@ img {
         opacity: 1;
     }
 
-/* Page Loader preload wrapper*/
-.loader-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #262626;
-    height: 100%;
-    width: 100%;
-    z-index: 999999;
-}
 
 /* -------------------------------------------------------------------------
   Contacts page
    ------------------------------------------------------------------------- */
 
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section, ma  {
+    display: block;
+    position: relative;
+}
+
+
+
+#earth-bg {
+    background: url(../images/communication.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color: blue;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}   
+
+#contact .container{
+    opacity: 1;
+}
 
 #contact form {
     width: 700px;
@@ -833,4 +847,17 @@ img {
 
 h1 {
     animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+/* Page Loader preload wrapper*/
+.loader-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #262626;
+    height: 100%;
+    width: 100%;
+    z-index: 999999;
 }
