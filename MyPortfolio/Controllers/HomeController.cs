@@ -20,6 +20,8 @@ namespace MyPortfolio.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.HideNavBar = true;
+
             return View();
         }
 

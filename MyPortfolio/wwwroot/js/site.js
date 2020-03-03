@@ -1,7 +1,8 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-
+// Remove nav bar from home page
+$(".ms-webpart-chrome").first().removeClass("ms-webpart-chrome");
 
 
 // Open and close gate animation

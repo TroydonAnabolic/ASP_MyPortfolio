@@ -138,6 +138,10 @@ body.loaded .fadein {
     overflow: hidden;
 }
 
+#brick-wall #main-nav {
+    display: none!important;
+}
+
 #menu-button {
     background: url(../images/menu-button.jpg);
     background-position: center center;

@@ -10,22 +10,24 @@
 </head>
 <body>
     <header>
-        <nav id="main-nav">
-            <div id="menu-button" >
-            </div>
-            <div id="logo"></div>
-            <div id="menu-content" class="invisible containerz blue circleBehind">
-                <ul>
-                    <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
-                    <li><a asp-controller="Home" asp-action="Bio">BIO</a></li>
-                    <li><a asp-controller="Home" asp-action="Skills">SKILLS</a></li>
-                    <li><a asp-controller="Home" asp-action="Projects">PROJECTS</a></li>
-                    <li><a asp-controller="Home" asp-action="Contact">CONTACT</a></li>
-                </ul>
-            </div>
-        </nav>
-
-    </header>
+        @if (ViewBag.HideNavBar == null)
+        {
+            <nav id="main-nav">
+                <div id="menu-button">
+                </div>
+                <div id="logo"></div>
+                <div id="menu-content" class="invisible containerz blue circleBehind">
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
+                        <li><a asp-controller="Home" asp-action="Bio">BIO</a></li>
+                        <li><a asp-controller="Home" asp-action="Skills">SKILLS</a></li>
+                        <li><a asp-controller="Home" asp-action="Projects">PROJECTS</a></li>
+                        <li><a asp-controller="Home" asp-action="Contact">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+        }
+        </header>
     <main role="main">
         <div id="loader-wrapper">
             <div class="loader">Loading...</div>
