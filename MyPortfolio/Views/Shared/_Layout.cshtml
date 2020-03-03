@@ -27,12 +27,11 @@
 
     </header>
     <main role="main">
-        @*<div class="loader">Loading...</div>*@
-        <div id="content">
-            <div id="loading"></div>
-            <div id="isItLoaded"></div>
+        <div id="pre-loader"></div>
+        <div class="spinner-wrapper">
+            <div class="spinner"></div>
         </div>
-        @*try using invisible class if this does not work*@
+        @*try using invisible class if this does not work or use the class timer method like the other ones*@
 
         @if (IsSectionDefined("SpecialOther"))
         {
@@ -50,6 +49,7 @@
         </footer>*@
     <script src="https://kit.fontawesome.com/199919a52c.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/pre-loader.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)

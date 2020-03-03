@@ -2,6 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 
+
 // Open and close gate animation
 $(".open_close_doors").click(function () {
 

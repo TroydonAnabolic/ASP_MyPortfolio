@@ -102,6 +102,19 @@ h1 {
         max-width: fit-content;
     }
 
+    /*Pre-load animation*/
+.fadein {
+    opacity: 0;
+    -moz-transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    transition: opacity 1.5s;
+}
+
+body.loaded .fadein {
+    opacity: 1;
+}
+
 /* -------------------------------------------------------------------------
    Header
    ------------------------------------------------------------------------- */
@@ -602,7 +615,7 @@ img {
     top: 7%;
     padding: 5%;
     vertical-align: middle;
-    height: 70%;
+    height: 60%;
     width: 80%;
     overflow: auto;
 }
@@ -698,10 +711,68 @@ img {
 /* Add a transparency effect for thumnbail images */
 .demo {
     opacity: 0.6;
+    border-radius: 50%;
+    margin: 3%;
 }
 
     .active,
     .demo:hover {
         opacity: 1;
     }
+
+
+
+
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
+    }
+
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    }
+
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    }
+
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
+
+.spinner-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff6347;
+    z-index: 999999;
+}
 

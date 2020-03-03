@@ -1,0 +1,12 @@
+﻿
+Features to Implement:
+
+-Make smaller images circle shape by increase border radius and also try to change slider change effects
+
+-Use the ASP.NET isRequired and include statements of cshtml to exclude navbar from main homepage.
+
+-Upload project once finished using Azure hosting and then include link on the CV.
+
+BUGS TO FIX:
+
+- Container moves and resizes when clicking on spaceship only
