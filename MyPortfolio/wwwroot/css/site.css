@@ -513,7 +513,7 @@ article.bio {
 /*Some of the falling word idea is used from the falling snow sample on https://www.claytabase.co.uk/Web-Site-Design-Services/Technical-Articles/Using-CSS/Create-Falling-Objects-in-CSS by Gavin clayton*/ 
 
 #skills {
-    position: absolute;
+    position: relative;
     opacity: 0.5;
     width: 100%;
     height: 100%;
@@ -720,7 +720,7 @@ img {
         opacity: 1;
     }
 
-/* Page Loader wrapper*/
+/* Page Loader preload wrapper*/
 .loader-wrapper {
     position: absolute;
     top: 0;
@@ -732,3 +732,35 @@ img {
     width: 100%;
     z-index: 999999;
 }
+
+/*Preload animation for actual page elements*/
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-500%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#main-nav, .bio, .container, #skills {
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+h1 {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
