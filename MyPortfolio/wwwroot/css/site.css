@@ -370,6 +370,7 @@ article.bio {
     padding: 5% 15%;
     height: 500px;
     line-height: 2rem;
+    top: 20%;
 }
 
 /*This scrolling animation is a modification of the code posted on this blod: https://www.positronx.io/create-css-scrolling-text-effects-marquee/ by Djamber*/
@@ -513,7 +514,7 @@ article.bio {
 /*Some of the falling word idea is used from the falling snow sample on https://www.claytabase.co.uk/Web-Site-Design-Services/Technical-Articles/Using-CSS/Create-Falling-Objects-in-CSS by Gavin clayton*/
 
 #skills {
-    position: relative;
+    position: absolute;
     opacity: 0.5;
     width: 100%;
     height: 100%;
