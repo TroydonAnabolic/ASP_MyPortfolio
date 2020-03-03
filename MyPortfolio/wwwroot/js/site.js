@@ -3,6 +3,7 @@
 
 
 
+
 // Open and close gate animation
 $(".open_close_doors").click(function () {
 
