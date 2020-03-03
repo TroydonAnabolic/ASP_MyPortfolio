@@ -1,7 +1,18 @@
-﻿
+﻿$color-background: #eaecfa;
 $color-loader: #ce4233;
 
 
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #262626;
+    height: 100%;
+    width: 100%;
+    z-index: 999999;
+}
 
 .loader {
     width: 250px;
@@ -17,6 +28,7 @@ $color-loader: #ce4233;
     font-weight: 900;
     color: $color-loader;
     letter-spacing: 0.2em;
+    z-index:5;
 
     &::before, &::after {
         content: "";

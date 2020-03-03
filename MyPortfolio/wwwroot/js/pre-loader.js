@@ -8,15 +8,19 @@
 //    $("#preloader").addClass(".loader");
 //    $(".loader").fadeOut("slow");
 
-//});
+//}); #262626;
 
 
     $(document).ready(function() {
         //Preloader
-        preloaderFadeOutTime = 1000;
+        preloaderFadeOutTime = 3000;
 function hidePreloader() {
-var preloader = $('.spinner-wrapper');
+var preloader = $('.loader');
     preloader.fadeOut(preloaderFadeOutTime);
+
+    $("#loader-wrapper").addClass("loader-wrapper");
+    var loadwrapper = $(".loader-wrapper");
+    loadwrapper.fadeOut(preloaderFadeOutTime);
     }
     hidePreloader();
     });
