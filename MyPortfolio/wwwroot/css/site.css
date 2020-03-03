@@ -102,7 +102,7 @@ h1 {
         max-width: fit-content;
     }
 
-    /*Pre-load animation*/
+/*Pre-load animation*/
 .fadein {
     opacity: 0;
     -moz-transition: opacity 1.5s;
@@ -372,7 +372,7 @@ article.bio {
     line-height: 2rem;
 }
 
-/*This scrolling animation is a modification of the code posted on this blod: https://www.positronx.io/create-css-scrolling-text-effects-marquee/ by Djamber*/ 
+/*This scrolling animation is a modification of the code posted on this blod: https://www.positronx.io/create-css-scrolling-text-effects-marquee/ by Djamber*/
 .scroll-up {
     overflow: hidden;
     position: relative;
@@ -510,7 +510,7 @@ article.bio {
   Skills page
    ------------------------------------------------------------------------- */
 
-/*Some of the falling word idea is used from the falling snow sample on https://www.claytabase.co.uk/Web-Site-Design-Services/Technical-Articles/Using-CSS/Create-Falling-Objects-in-CSS by Gavin clayton*/ 
+/*Some of the falling word idea is used from the falling snow sample on https://www.claytabase.co.uk/Web-Site-Design-Services/Technical-Articles/Using-CSS/Create-Falling-Objects-in-CSS by Gavin clayton*/
 
 #skills {
     position: relative;
@@ -524,10 +524,8 @@ article.bio {
 }
 
 .snowContainer {
-
     background-color: black;
     overflow: hidden;
-
 }
 
 .skillWords {
@@ -596,7 +594,6 @@ img {
     margin: 3rem auto;
     width: 36%;
     text-align: center;
-
 }
 
 /* Hide the images by default */
@@ -620,10 +617,10 @@ img {
     overflow: auto;
 }
 
-/*hide the scroll bar*/
-.image-description::-webkit-scrollbar {
-    display: none;
-}
+    /*hide the scroll bar*/
+    .image-description::-webkit-scrollbar {
+        display: none;
+    }
 
 .mySlides a {
     color: inherit;
@@ -649,7 +646,7 @@ img {
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: white!important;
+    color: white !important;
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
@@ -696,11 +693,11 @@ img {
     margin: 0;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
 /* Six columns side by side */
 .column {
@@ -733,8 +730,82 @@ img {
     z-index: 999999;
 }
 
-/*Preload animation for actual page elements*/
+/* -------------------------------------------------------------------------
+  Contacts page
+   ------------------------------------------------------------------------- */
 
+
+#contact form {
+    width: 700px;
+    outline: solid 5px #00ffcc;
+    padding: 2rem 5rem;
+    margin-top: 2rem;
+    background-color: #0d0d0d;
+    opacity: 0.5;
+    font-size: 0.8rem;
+    box-shadow: 1px 1px grey;
+}
+
+#contact form:hover {
+    background-image: url(https://media.giphy.com/media/3bc8pP1rVdfgN1uoMV/giphy.gif);
+}
+
+
+    #contact .form-group {
+        color: grey;
+        text-align: left;
+    }
+
+
+#contact input, #contact textarea, #contact textarea::placeholder {
+    background-color: black;
+    color: #00ffcc;
+}
+
+#contact label, input[type=tel], input[type=text], input[type=email] {
+    text-align: left;
+}
+
+#contact input[type=submit] {
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 100%;
+    padding: 3rem;
+    margin-top: 1.5rem;
+    outline-width: 10px;
+}
+
+    /*make submit button highlighted when hovered over*/
+    #contact input[type=submit]:hover {
+        background-color: #00ffcc;
+        color: white;
+    }
+
+/*center submite button*/
+#contact .form-group:nth-child(6) {
+    text-align: center;
+}
+
+#submit {
+    background-color: pink;
+}
+
+/*grow borders of contact box when clicked*/
+
+.border-button {
+    outline: solid 5px #00ffcc;
+    transition: outline 0.6s linear;
+    margin: 0.5em; /* Increased margin since the outline expands outside the element */
+}
+
+    .border-button:hover {
+        /*outline-width: 10px;*/
+    }
+
+/* -------------------------------------------------------------------------
+  Preloader
+   ------------------------------------------------------------------------- */
+/*Preload animation for actual page elements*/
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-500%);
@@ -763,4 +834,3 @@ img {
 h1 {
     animation: 1s ease-out 0s 1 slideInFromRight;
 }
-

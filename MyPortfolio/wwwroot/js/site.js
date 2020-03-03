@@ -101,3 +101,16 @@ $(".mySlides").mouseenter(function () {
         $(".image-description").addClass("invisible");
     });
 });
+
+
+// Button animation: When button is clicked/submitted it will grow the border for the contact box for 3 seconds.
+
+var submit = curElement.closest('form').find(':submit');
+
+$("#contact form").mouseenter(function () {
+    $(".border-button").css("outline-width", "10px");
+});
+    
+$("#test").mouseenter(function () {
+    $("h3").css("color", "pink");
+});
