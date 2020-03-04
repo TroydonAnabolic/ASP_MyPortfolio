@@ -43,6 +43,8 @@ $("#menu-button").click(function () {
     $("#menu-button").hide("fast");
     $("#logo").css("font-size", "2rem");
     $("#menu-content").removeClass("invisible");
+    $("#code-logo").removeClass("invisible");
+
 
     // after clicking, we make the mouse button appear again each time it leaves menu
     $("#main-nav").mouseenter(function () {
