@@ -9,7 +9,7 @@
    #262626: Dark background
    #00ffcc: Main text color
    #33ccff: Heading colors
-
+   #00ff55: loading color and menu nav
 
 
    Fonts
@@ -124,6 +124,7 @@ body.loaded .fadein {
    ------------------------------------------------------------------------- */
 #main-nav {
     background: linear-gradient(to left, #333333 0%, #0d0d0d 100%);
+    border-left: 1px solid #00ffcc;
     width: 2%;
     height: 100%;
     position: fixed;
@@ -147,6 +148,7 @@ body.loaded .fadein {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+    border: 1px solid #00ffcc;
     display: block;
     text-align: center;
     position: absolute;
@@ -156,8 +158,6 @@ body.loaded .fadein {
     width: 100%;
 }
 
-
-
 #logo {
     font-family: 'Monoton';
     font-size: 1rem;
@@ -166,6 +166,7 @@ body.loaded .fadein {
 }
 
 #menu-content {
+    border-top: 1px solid #00ffcc;
     text-align: center;
     position: absolute;
     height: 350px;
@@ -197,21 +198,34 @@ div.containerz a {
         line-height: 0.5;
     }
 
-/* Circle behind */
-div.circleBehind a:before, div.circleBehind a:after {
-    position: absolute;
-    left: 50%;
-    width: 40px;
-    height: 40px;
-    border: 4px solid #0277bd;
-    transform: translateX(-50%) translateY(-50%) scale(0.8);
-    border-radius: 50%;
-    background: transparent;
-    content: "";
-    opacity: 0;
-    transition: all 0.3s;
-    z-index: -1;
+.social-media {
+    border-top: 1px solid #00ffcc;
+    margin-top: 4rem; /* pushe social media links down to add space from main page nav */
 }
+
+    .social-media li {
+        margin: 0 1rem;
+    }
+
+        .social-media li a {
+            margin: 0 0.5rem;
+        }
+
+        /* Circle behind */
+        div.circleBehind a:before, div.circleBehind a:after {
+            position: absolute;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #0277bd;
+            transform: translateX(-50%) translateY(-50%) scale(0.8);
+            border-radius: 50%;
+            background: transparent;
+            content: "";
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: -1;
+        }
 
 div.circleBehind a:after {
     border-width: 2px;
