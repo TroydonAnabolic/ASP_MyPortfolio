@@ -62,21 +62,9 @@
         <div id="loader-wrapper">
             <div class="loader">Loading...</div>
         </div>
-
-        @if (IsSectionDefined("SpecialOther"))
-        {
-            @RenderSection("SpecialOther")
-        }
         @RenderBody()
-
     </main>
 
-    @*<footer class="border-top footer text-muted">
-
-            <div class="container">
-                &copy; 2020 - MyPortfolio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
-        </footer>*@
     <script src="https://kit.fontawesome.com/199919a52c.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/pre-loader.js"></script>
