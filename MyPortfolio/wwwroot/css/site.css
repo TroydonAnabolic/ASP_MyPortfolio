@@ -230,13 +230,19 @@ div.circleBehind a:hover:after {
 /* -------------------------------------------------------------------------
     Gate
    ------------------------------------------------------------------------- */
-a .open_close_doors {
-    font-size: 5rem;
+.open_close_doors {
+    left: 10%;
+    font-size: 4rem;
     font-family: Impact;
     opacity: 0.8;
     color: #33ccff;
     -webkit-text-stroke-color: white;
     text-shadow: -1px -1px 0 white, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: absolute;
+    margin: auto;
+    top: 40%;
+    left: 28%;
+    z-index: 4;
 }
 
 a:link.open_close_doors {
@@ -321,15 +327,6 @@ a:active.open_close_doors {
     left: 50%;
     position: relative;
     z-index: 1;
-}
-
-.open_close_doors {
-    position: absolute;
-    margin: auto;
-    top: 45%;
-    left: 33%;
-    z-index: 4;
-    text-align: center;
 }
 
 .rightdoor_open {

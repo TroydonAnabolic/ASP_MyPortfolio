@@ -2,7 +2,6 @@
 
 Features to Implement:
 
-- Remove Nav bar from homepage
 
 - Fix font SIZE for homepage link
 
