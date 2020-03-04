@@ -2,18 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 
-<header id="home-page"></header>
 
-<div class="text-center" id="brick-wall">
-    <div id="leftdoor_inner"></div>
-    <div id="leftdoor_outer"></div>
-    <div id="rightdoor_inner"></div>
-    <div id="rightdoor_outer"></div>
 
-    <div id="rightdoor_open"></div>
-    <div id="leftdoor_open"></div>
-    <a class="open_close_doors" href="#">
-        Troydon Luicien - Developer<br />
-        ENTER MY PORTFOLIO
-    </a>
-</div>
+    <div class="text-center" id="brick-wall">
+        <div id="leftdoor_inner"></div>
+        <div id="leftdoor_outer"></div>
+        <div id="rightdoor_inner"></div>
+        <div id="rightdoor_outer"></div>
+
+        <div id="rightdoor_open"></div>
+        <div id="leftdoor_open"></div>
+
+        <a onclick="playAudio('/audio/gate-open.wav')" class="open_close_doors" href="#">
+            Troydon Luicien - Developer<br />
+            ENTER MY PORTFOLIO
+        </a>
+        @*<audio id="audio-gate" src="~/audio/gate-open.wav" autoplay="false"></audio>*@
+
+    </div>

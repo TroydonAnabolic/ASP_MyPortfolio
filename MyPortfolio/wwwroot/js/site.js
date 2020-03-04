@@ -1,14 +1,15 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Remove nav bar from home page
-$(".ms-webpart-chrome").first().removeClass("ms-webpart-chrome");
-
+// Play sound when gate is opened
+function playAudio(url) {
+    new Audio(url).play();
+}
 
 // Open and close gate animation
 $(".open_close_doors").click(function () {
 
-     //follow link after 6 seconds TODO: change link to BIO/About me instead of privacy after test
+     //follow link after 2 seconds after opening the gate
     $(function () {
         setTimeout(function () {
             window.location.href = "/Home/Bio";
