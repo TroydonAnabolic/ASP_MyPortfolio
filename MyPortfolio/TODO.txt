@@ -2,12 +2,9 @@
 
 Features to Implement:
 
-
-- Fix font SIZE for homepage link
-
--Use the ASP.NET isRequired and include statements of cshtml to exclude navbar from main homepage.
-
 -Upload project once finished using Azure hosting and then include link on the CV.
+
+- Comment everything for future use
 
 
 
