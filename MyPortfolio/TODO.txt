@@ -5,7 +5,6 @@ Features to Implement:
 -Upload project once finished using Azure hosting and then include link on the CV.
 
 - Comment everything for future use
-- Add open metal gate sound when clicking profile
 
 - Make website responsive with a seperate responsive stylesheet
 
