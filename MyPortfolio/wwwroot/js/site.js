@@ -57,6 +57,8 @@ $("#menu-button").click(function () {
         $("#menu-button").show("fast");
         $("#logo").css("font-size", "1rem");
         $("#menu-content").addClass("invisible");
+        $("#code-logo").addClass("invisible");
+
     });
 });
 
