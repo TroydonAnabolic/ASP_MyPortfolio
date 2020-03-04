@@ -71,7 +71,6 @@ $("#scroll").mouseenter(function () {
 
 
 //Project slideshow anumation
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
