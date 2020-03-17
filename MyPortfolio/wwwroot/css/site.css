@@ -128,8 +128,7 @@ h1 {
 }
 
 #menu-button {
-    background: url(../images/menu-button.jpg);
-    background-position: center center;
+    background: url('https://lh3.googleusercontent.com/8QSps4_1FJzx-IT-MTTCEFu_mTYszQmX7JJ18TYHaJG8fpRisG7M-LrAUcM9QE5GUO0kYCPxWobzslj6NKMZFBXbMNOYzsuhOI-_o_f1clTGkYjOucGznNt2kMini6mYm5q4vMckaw'); background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     border: 1px solid #00ffcc;
@@ -151,7 +150,7 @@ h1 {
 }
 
 #code-logo {
-    background: url(../images/coder.jpg);
+    background: url('https://lh3.googleusercontent.com/7d2IM3wd35RRdVGpiGyt0AAWtf6AhswtDIUf_47SG07usLmWALJblAUDd1N9ax2eT4STP9VHMti3Arx9NP37e7oDPKK9seuOdCZCVbvTm70hySJ52BZzHTtnLoTF2tzteJtSh1-llA');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%; /*allows element to stretch vertically*/
@@ -280,8 +279,7 @@ a:active.open_close_doors {
 }
 
 #leftdoor_inner {
-    background: url(../images/gate-left.png);
-    background-position: center center;
+    background: url('https://lh3.googleusercontent.com/pwgsm3IZGqfDPSMZpAGULKxKTK5pFd7hCFoKkfvnLHj7p3iYGmwNBj8VJBRYBYuOPdARYy_0_5NBjnpWJYimp0J6YRyDmKMk2n2Bz5ekBLOAqjR9jsBBR3ZxEY6vDbqeUgYeQuDitQ'); background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 40%;
@@ -293,8 +291,7 @@ a:active.open_close_doors {
 }
 
 #leftdoor_outer {
-    background: url(../images/brick-wall.jpg);
-    background-position: center center;
+    background: url('https://lh3.googleusercontent.com/eoUfw1VHYSQT9xLAPDJlb7s89zqzXSXOjI_p1EXRvhyF1kD4O7HWhoECmgivgSoZL_atmoIjQN6XixVIJxfAbRrgE5KbRAUCWZ4NXuOgoptGs92m5-2gzoqfdJlop-PH3sZgQdak-g'); background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%;
     width: 50%;
@@ -307,7 +304,7 @@ a:active.open_close_doors {
 }
 
 #rightdoor_inner {
-    background: url("../images/gate-right.png");
+    background: url('https://lh3.googleusercontent.com/4cPjc8G5F2Kl3HbcaASeXvK2Ekz0dnlL7QuFKyNTsNqAWC276_1TQJGKoyf8dcEQUhKKRbS3Nv-A83GG5ISRZo_2Z2TVqMAtXx7SVPAXokM2IeatigEuqAYoYWlm8TXIvWXFlD0pEg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -320,7 +317,7 @@ a:active.open_close_doors {
 }
 
 #rightdoor_outer {
-    background: url("../images/brick-wall.jpg");
+    background: url('https://lh3.googleusercontent.com/eoUfw1VHYSQT9xLAPDJlb7s89zqzXSXOjI_p1EXRvhyF1kD4O7HWhoECmgivgSoZL_atmoIjQN6XixVIJxfAbRrgE5KbRAUCWZ4NXuOgoptGs92m5-2gzoqfdJlop-PH3sZgQdak-g');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -334,8 +331,7 @@ a:active.open_close_doors {
 }
 
 .rightdoor_open {
-    background: url("../images/gate-open-right.png");
-    background-position: center center;
+    background: url('https://lh3.googleusercontent.com/8DE1IsrlerCHKBLx-3ngR5b4lhTTJYbnWXH5kOhPEkV_4y_q11Le6Q0xx_zzM-auGuSXdaMvHxFzXTt0Vd2uOwSJYdJp6PkZEgHNepoQ-KAylgd4aQKpf0hrHYZ5ydia49DNazgb6w'); background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 40%;
@@ -347,7 +343,7 @@ a:active.open_close_doors {
 }
 
 .leftdoor_open {
-    background: url("../images/gate-open-left.png");
+    background: url('https://lh3.googleusercontent.com/7MgK5uIp1Nbs-9uidiNrl5mjk7xBq0YqcqJYvUN3w0RBTVCVC69qkUfVx9r5j4Xb-YZlqPMfA-S7haIlC50OrjRaQDCKAE6gN5aVUWaC-kuh_VFrs7GgTBKyiMnjB0vbaisqhR2t0w');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -730,7 +726,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section, 
 
 /* set an earth to be backkground img*/
 #earth-bg {
-    background: url(../images/communication.jpg);
+    background: url(https://lh3.googleusercontent.com/pESyV4PL4oQ5aTZlatQvOI3NjjYelP89hHkiL1MG_ppL6Lsc11wJEYAH7Z6VLXs4jNLD6O7wsBNGNH9zsFqr0h9HzPeHI345lAl8Oe2aE0giwmZQhQ0Gb22Rieu2zD0yORvz6C7EFA);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
