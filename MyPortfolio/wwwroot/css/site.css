@@ -128,7 +128,8 @@ h1 {
 }
 
 #menu-button {
-    background: url('https://lh3.googleusercontent.com/8QSps4_1FJzx-IT-MTTCEFu_mTYszQmX7JJ18TYHaJG8fpRisG7M-LrAUcM9QE5GUO0kYCPxWobzslj6NKMZFBXbMNOYzsuhOI-_o_f1clTGkYjOucGznNt2kMini6mYm5q4vMckaw'); background-position: center center;
+    background: url('https://lh3.googleusercontent.com/8QSps4_1FJzx-IT-MTTCEFu_mTYszQmX7JJ18TYHaJG8fpRisG7M-LrAUcM9QE5GUO0kYCPxWobzslj6NKMZFBXbMNOYzsuhOI-_o_f1clTGkYjOucGznNt2kMini6mYm5q4vMckaw');
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     border: 1px solid #00ffcc;
@@ -279,7 +280,8 @@ a:active.open_close_doors {
 }
 
 #leftdoor_inner {
-    background: url('https://lh3.googleusercontent.com/pwgsm3IZGqfDPSMZpAGULKxKTK5pFd7hCFoKkfvnLHj7p3iYGmwNBj8VJBRYBYuOPdARYy_0_5NBjnpWJYimp0J6YRyDmKMk2n2Bz5ekBLOAqjR9jsBBR3ZxEY6vDbqeUgYeQuDitQ'); background-position: center center;
+    background: url('https://lh3.googleusercontent.com/pwgsm3IZGqfDPSMZpAGULKxKTK5pFd7hCFoKkfvnLHj7p3iYGmwNBj8VJBRYBYuOPdARYy_0_5NBjnpWJYimp0J6YRyDmKMk2n2Bz5ekBLOAqjR9jsBBR3ZxEY6vDbqeUgYeQuDitQ');
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 40%;
@@ -291,7 +293,8 @@ a:active.open_close_doors {
 }
 
 #leftdoor_outer {
-    background: url('https://lh3.googleusercontent.com/eoUfw1VHYSQT9xLAPDJlb7s89zqzXSXOjI_p1EXRvhyF1kD4O7HWhoECmgivgSoZL_atmoIjQN6XixVIJxfAbRrgE5KbRAUCWZ4NXuOgoptGs92m5-2gzoqfdJlop-PH3sZgQdak-g'); background-position: center center;
+    background: url('https://lh3.googleusercontent.com/eoUfw1VHYSQT9xLAPDJlb7s89zqzXSXOjI_p1EXRvhyF1kD4O7HWhoECmgivgSoZL_atmoIjQN6XixVIJxfAbRrgE5KbRAUCWZ4NXuOgoptGs92m5-2gzoqfdJlop-PH3sZgQdak-g');
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%;
     width: 50%;
@@ -331,7 +334,8 @@ a:active.open_close_doors {
 }
 
 .rightdoor_open {
-    background: url('https://lh3.googleusercontent.com/8DE1IsrlerCHKBLx-3ngR5b4lhTTJYbnWXH5kOhPEkV_4y_q11Le6Q0xx_zzM-auGuSXdaMvHxFzXTt0Vd2uOwSJYdJp6PkZEgHNepoQ-KAylgd4aQKpf0hrHYZ5ydia49DNazgb6w'); background-position: center center;
+    background: url('https://lh3.googleusercontent.com/8DE1IsrlerCHKBLx-3ngR5b4lhTTJYbnWXH5kOhPEkV_4y_q11Le6Q0xx_zzM-auGuSXdaMvHxFzXTt0Vd2uOwSJYdJp6PkZEgHNepoQ-KAylgd4aQKpf0hrHYZ5ydia49DNazgb6w');
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 40%;
@@ -745,19 +749,19 @@ main {
     overflow: hidden;
 }
 
-/* [3] Finally, transforming the image when container gets hovered */
+    /* [3] Finally, transforming the image when container gets hovered */
 
-main #earth-bg {
-    transform-origin: 50% 65%;
-    transition: transform 5s, filter 3s ease-in-out;
-    filter: brightness(150%);
-}
+    main #earth-bg {
+        transform-origin: 50% 65%;
+        transition: transform 5s, filter 3s ease-in-out;
+        filter: brightness(150%);
+    }
 
-/* The Transformation when the main element is hovered  we select the earth bg and apply this style */
-main:hover #earth-bg {
-    filter: brightness(100%);
-    transform: scale(1.5);
-}
+    /* The Transformation when the main element is hovered  we select the earth bg and apply this style */
+    main:hover #earth-bg {
+        filter: brightness(100%);
+        transform: scale(1.5);
+    }
 
 /*Contact form style*/
 #contact .container {
@@ -775,7 +779,7 @@ main:hover #earth-bg {
     box-shadow: 1px 1px grey;
 }
 
-/*When we hover over the contact form ID we apply a new background flame image*/
+    /*When we hover over the contact form ID we apply a new background flame image*/
     #contact form:hover {
         background-image: url(https://media.giphy.com/media/3bc8pP1rVdfgN1uoMV/giphy.gif);
     }
@@ -872,4 +876,41 @@ h1 {
     height: 100%;
     width: 100%;
     z-index: 999999;
+}
+
+
+/* -------------------------------------------------------------------------
+  Responsive Design
+   ------------------------------------------------------------------------- */
+
+/*Mobile Devices*/
+
+/* iPhone 6/7/8 plus in portrait */
+@media only screen and (max-device-width : 414px) and (max-device-height : 736px) and (orientation : portrait) { /*TODO: Try adding min and max to avoid anything smaller from causing error*/
+    article.bio {
+        margin: 0;
+        padding: 5px 5px;
+        overflow: hidden;
+    }
+
+    #bio-description {
+        width: 100%;
+        float: none;
+        padding: 15% 15%;
+        height: 500px;
+        line-height: 2rem;
+        top: 20%;
+    }
+
+    #bio-object {
+        width: 40%;
+        float: none;
+        padding: 5%;
+    }
+}
+/* iPhone 6/7/8 plus in landscape */
+@media only screen and (max-device-width : 736px) and (max-device-height : 414px) and (orientation : landscape) { /*TODO: Try adding min and max to avoid anything smaller from causing error*/
+    #bio-object {
+        position: absolute;
+    }
 }

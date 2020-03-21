@@ -1,1 +1,70 @@
-﻿
+﻿/*Mobile devices*/
+
+/*S20 Ultra 5G*/
+/*@media screen and (min-device-pixel-ratio: 3.4) and (max-width: 423px)*/
+@media only screen and (min-device-width: 423) and (min-device-width: 941px) and (orientation: potrait) and (-webkit-device-pixel-ratio: 3.4){
+    #bio-object {
+        position: absolute;
+    }
+
+    /* iPhone 6 in portrait & landscape */
+    @media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+        #bio-object {
+            position: absolute;
+            background-color: #692424;
+        }
+        }
+
+    /* iPhone 6 in landscape */
+    @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+        #bio-object {
+            position: absolute;
+        }
+
+    /* iPhone 6 in portrait */
+    @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+        #bio-object {
+            position: absolute;
+        }
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) {
+    article.bio {
+        margin: 0 2%;
+        padding: 40px 20px;
+        overflow: hidden;
+    }
+
+    #bio-description {
+        width: 60%;
+        float: left;
+        padding: 5% 15%;
+        height: 500px;
+        line-height: 2rem;
+        top: 20%;
+    }
+    #bio-object {
+        width: 40%;
+        float: left;
+        padding: 5%;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767px) {
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991px) {
+}
+
+
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199px) {
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
+ 
