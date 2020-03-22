@@ -50,6 +50,9 @@ $("#menu-button").click(function () {
     }
     else $("#main-nav").css("width", "7%");
     $("#menu-button").hide("fast");
+    if (windowSize <= 736) {
+        $("#logo").css("font-size", "1.2rem");
+    } else
     $("#logo").css("font-size", "2rem");
     $("#menu-content").removeClass("invisible");
     $("#code-logo").removeClass("invisible");

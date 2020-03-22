@@ -446,10 +446,10 @@ article.bio {
     padding: 5%;
 }
 
-#bio-object img {
-    width: 200px;
-    height: 160px;
-}
+    #bio-object img {
+        width: 200px;
+        height: 160px;
+    }
 
 /* WebKit and Opera browsers */
 @-webkit-keyframes spinner {
@@ -894,12 +894,13 @@ h1 {
 
 /* iPhone 6/7/8 plus in portrait */
 @media only screen and (max-device-width : 414px) and (max-device-height : 736px) and (orientation : portrait) { /*TODO: Try adding min and max to avoid anything smaller from causing error*/
+    /*Reduce padding and margin so it takes out screen size more*/
     article.bio {
         margin: 0;
         padding: 5px 5px;
         overflow: scroll;
     }
-
+    /*Make sure now it takes the full size of the bio section and remove the floating aspects*/
     #bio-description {
         width: 100%;
         float: none;
@@ -953,7 +954,56 @@ h1 {
 
 /* iPhone 6/7/8 plus in landscape */
 @media only screen and (max-device-width : 736px) and (max-device-height : 414px) and (orientation : landscape) { /*TODO: Try adding min and max to avoid anything smaller from causing error*/
+
+    article.bio {
+        margin: 0;
+        padding: 5px 5px;
+        overflow: scroll;
+    }
+
+    #bio-description {
+        width: 100%;
+        float: none;
+        padding: 15% 15%;
+        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        line-height: 2rem;
+        top: 20%;
+    }
+    #stage {
+        left: 20%;
+    }
+
+    #bio-object {
+        float: none;
+        padding: 5%;
+    }
+
+        #bio-object img {
+            width: 150px;
+            height: 110px;
+        }
+
     #main-nav {
         width: 6%;
+        overflow: auto;
+        font-size: 0.6rem;
     }
+
+    #menu-content ul {
+        width: 90%;
+        left: 8%;
+        position: sticky;
+    }
+
+    div.containerz a {
+        padding: 3px;
+    }
+
+    .social-media li a {
+        margin: 0.5rem;
+        padding: 0;
+        font-size: 0.9rem;
+    }
+
+
 }
