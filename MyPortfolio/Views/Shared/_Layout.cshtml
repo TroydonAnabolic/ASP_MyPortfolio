@@ -13,50 +13,53 @@
     <header>
         @if (ViewBag.HideNavBar == null)
         {
-            <nav id="main-nav">
-                <div id="menu-button">
-                </div>
-                <div id="logo">TL</div>
+        <nav id="main-nav">
+            <div id="menu-button">
+            </div>
+            <div id="logo">TL</div>
 
-                <div id="code-logo" class="invisible">
-                </div>
+            <div id="code-logo" class="invisible">
+            </div>
+            <div id="flameBar"  ></div>
+            <div id="flameBar2"  ></div>
 
-                <div id="menu-content" class="invisible containerz blue circleBehind">
+
+            <div id="menu-content" class="invisible containerz blue circleBehind">
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
+                    <li><a asp-controller="Home" asp-action="Bio">BIO</a></li>
+                    <li><a asp-controller="Home" asp-action="Skills">SKILLS</a></li>
+                    <li><a asp-controller="Home" asp-action="Projects">PROJECTS</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact">CONTACT</a></li>
+                </ul>
+
+                <!-- Social media links. -->
+                <div class="social-media">
                     <ul>
-                        <li><a asp-controller="Home" asp-action="Index">HOME</a></li>
-                        <li><a asp-controller="Home" asp-action="Bio">BIO</a></li>
-                        <li><a asp-controller="Home" asp-action="Skills">SKILLS</a></li>
-                        <li><a asp-controller="Home" asp-action="Projects">PROJECTS</a></li>
-                        <li><a asp-controller="Home" asp-action="Contact">CONTACT</a></li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/troydon-luicien-6127a762/" target="_blank">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span>
+                            </a>
+                            <a href="http://instagram.com/TroyIncarnate/" target="_blank">
+                                <i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only"> Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-twitter-square" aria-hidden="true"></i><span class="sr-only">Twitter</span>
+                            </a>
+                            <a href="https://www.facebook.com/TroydonAnabolicish" target="_blank">
+                                <i class="fab fa-facebook-square"
+                                   aria-hidden="true"></i><span class="sr-only">FaceBook</span>
+                            </a>
+                        </li>
                     </ul>
+                </div>
 
-                    <!-- Social media links. -->
-                    <div class="social-media">
-                        <ul>
-                            <li>
-                                <a href="https://www.linkedin.com/in/troydon-luicien-6127a762/" target="_blank">
-                                    <i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span>
-                                </a>
-                                <a href="http://instagram.com/TroyIncarnate/" target="_blank">
-                                    <i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only"> Instagram</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-twitter-square" aria-hidden="true"></i><span class="sr-only">Twitter</span>
-                                </a>
-                                <a href="https://www.facebook.com/TroydonAnabolicish" target="_blank">
-                                    <i class="fab fa-facebook-square"
-                                       aria-hidden="true"></i><span class="sr-only">FaceBook</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div> @*end menu content*@
+            </div> @*end menu content*@
 
 
-            </nav>
+        </nav>
         }
         </header>
     <main role="main">
