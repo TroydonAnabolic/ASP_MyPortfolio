@@ -37,37 +37,43 @@ $(".open_close_doors").click(function () {
     });
 });
 
-// When we click the power icon we expand the menu bar to show the menu items 
+// When we click the power icon we EXPAND the menu bar to show the menu items 
 var windowSize = $(window).width();
+const iPhonXLand = (windowSize <= 812 && window.devicePixelRatio.toFixed(0) == 3), S20ULand = (windowSize <= 941 && window.devicePixelRatio.toFixed(1) == 3.4);
 
 $("#menu-button").click(function () {
     //when the screen width is below 414 px width we expan nav bar by 15% instead
     if (windowSize <= 414) {
         $("#main-nav").css("width", "15%");
     }
-    else if (windowSize <= 736) {
+    else if (windowSize <= 423 && window.devicePixelRatio.toFixed(1) == 3.4 ) { // if device pixel ratio is 3.4 and window size is 423(S20 potrait)
+        $("#main-nav").css("width", "15%");
+    }
+    else if ((windowSize <= 736) || iPhonXLand) { // window size less than 736 or iphone x landscape
         $("#main-nav").css("width", "10%");
     }
     else $("#main-nav").css("width", "7%");
     $("#menu-button").hide("fast");
     if (windowSize <= 736) {
         $("#logo").css("font-size", "1.2rem");
+    }
+    else if (S20ULand || iPhonXLand) { // S20 landscape or iPhone X
+            $("#logo").css("font-size", "1.2rem");
     } else
     $("#logo").css("font-size", "2rem");
     $("#menu-content").removeClass("invisible");
     $("#code-logo").removeClass("invisible");
-
 
     // after clicking, we make the mouse button appear again each time it leaves menu
     $("#main-nav").mouseenter(function () {
         $("#menu-button").show("fast");
     });
 
-    // each time the mouse leaves we shrink the menu bar and show the button again
+    // each time the mouse leaves we SHRINK the menu bar and show the button again
     $("#main-nav").mouseleave(function () {
         //when the screen width is below 414 px width we send the nav bar back to normal
         if (windowSize <= 736) {
-            $("#main-nav").css("width", "6%");
+            $("#main-nav").css("width", "5%");
         } else
         $("#main-nav").css("width", "2%");
         $("#menu-button").show("fast");

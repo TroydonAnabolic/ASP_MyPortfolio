@@ -904,7 +904,7 @@ h1 {
     #bio-description {
         width: 100%;
         float: none;
-        padding: 15% 15%;
+        padding: 10% 15%;
         height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
         line-height: 2rem;
         top: 20%;
@@ -943,7 +943,6 @@ h1 {
     .social-media li {
         line-height: 0.5;
     }
-
 
         .social-media li a {
             margin: 0.3rem;
@@ -984,8 +983,8 @@ h1 {
         }
 
     #main-nav {
-        width: 6%;
-        overflow: auto;
+        width: 5%;
+        overflow: auto; /*Remove hidden to avoid bottom nav from being hidden*/
         font-size: 0.6rem;
     }
 
@@ -1004,6 +1003,304 @@ h1 {
         padding: 0;
         font-size: 0.9rem;
     }
+}
+
+/*iPhone X*/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait),
+    only screen and ( min--moz-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait),
+    only screen and ( -o-min-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait),
+  only screen and ( min-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait) {
+
+    /*Makes sure we can scroll down when viewport is too long*/
+    article.bio {
+        margin: 0;
+        padding: 5px 5px;
+        overflow: scroll;
+    }
+
+    #bio-description {
+        width: 100%;
+        float: none;
+        padding: 15% 15%;
+        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        line-height: 2rem;
+        top: 20%;
+    }
+
+    #stage {
+        padding: 10% 0; /*Pushes the rotating image down so it does not go too close to description*/
+    }
+
+    #bio-object {
+        float: none;
+        padding: 5%;
+        position: relative;
+    }
+
+        #bio-object img {
+            width: 150px;
+            height: 110px;
+        }
+
+    #main-nav {
+        font-size: 0.5rem;
+        overflow: auto;
+        width: 6%;
+    }
+
+    #menu-content ul {
+        width: 90%;
+        left: 8%;
+        position: sticky;
+    }
+
+    div.containerz a {
+        padding: 3px;
+    }
+
+    .social-media li {
+        line-height: 0.5;
+    }
+    /*TODO: look into changing this font as a query for all media devices with these values*/
+        .social-media li a {
+            margin: 0.3rem;
+            padding: 0;
+            font-size: 0.8rem;
+        }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape),
+    only screen and ( min--moz-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape),
+    only screen and ( -o-min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape),
+    only screen and ( min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape) {
+    article.bio {
+        margin: 0;
+        padding: 5px 5px;
+        overflow: scroll;
+    }
+
+    #bio-description {
+        width: 100%;
+        float: none;
+        padding: 10% 15%;
+        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        line-height: 2rem;
+        top: 20%;
+    }
+
+    #stage {
+        left: 20%;
+    }
+
+    #bio-object {
+        float: none;
+        padding: 5%;
+    }
+
+        #bio-object img {
+            width: 150px;
+            height: 110px;
+        }
+
+    #main-nav {
+        width: 5%;
+        overflow: auto; /*Remove hidden to avoid bottom nav from being hidden*/
+        font-size: 0.6rem;
+    }
+
+    #menu-content ul {
+        width: 90%;
+        left: 8%;
+        position: sticky;
+    }
+
+    div.containerz a {
+        padding: 3px;
+    }
+
+    .social-media li a {
+        margin: 0.3rem;
+        padding: 0;
+        font-size: 0.9rem;
+    }
+}
 
 
+
+/*S7 Edge*/
+@media only screen and (max-device-width : 360px) and (max-device-height : 640px) and (orientation : portrait) {
+    #main-nav {
+        font-size: 0.5rem;
+        overflow:auto;
+    }
+
+    #menu-content ul {
+        width: 90%;
+        left: 8%;
+        position: sticky;
+    }
+
+    div.containerz a {
+        padding: 3px;
+    }
+
+        /*Fixes social media icon display issue*/
+        .social-media li a {
+            margin: 0.2rem;
+            padding: 0;
+            font-size: 0.8rem;
+        }
+}
+
+@media only screen and (max-device-width : 640px) and (max-device-height : 360px) and (orientation : landscape) {
+
+    #bio-description {
+        padding: 10% 15%;
+    }
+
+    #main-nav {
+        width: 5%;
+        overflow: auto; /*Remove hidden to avoid bottom nav from being hidden*/
+        font-size: 0.6rem;
+    }
+
+    #menu-content ul {
+        width: 90%;
+        left: 8%;
+        position: sticky;
+    }
+
+    div.containerz a {
+        padding: 3px;
+    }
+
+    .social-media li a {
+        margin: 0.3rem;
+        padding: 0;
+        font-size: 0.8rem;
+    }
+}
+
+/*S20 Ultra 5G Potrait*/
+@media 
+    only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait),
+    only screen and ( min--moz-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait),
+    only screen and ( -o-min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait),
+    only screen and ( min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait) {
+
+    /*Makes sure we can scroll down when viewport is too long*/
+        article.bio {
+            margin: 0;
+            padding: 5px 5px;
+            overflow: scroll;
+        }
+
+        #bio-description {
+            width: 100%;
+            float: none;
+            padding: 15% 15%;
+            height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+            line-height: 2rem;
+            top: 20%;
+        }
+
+        #stage {
+            padding: 10% 0; /*Pushes the rotating image down so it does not go too close to description*/
+        }
+
+        #bio-object {
+            float: none;
+            padding: 5%;
+            position: relative;
+
+        }
+
+            #bio-object img {
+                width: 150px;
+                height: 110px;
+            }
+
+    #main-nav {
+        font-size: 0.6rem;
+        overflow: auto;
+        width: 6%;
+    }
+
+        #menu-content ul {
+            width: 90%;
+            left: 8%;
+            position: sticky;
+        }
+
+        div.containerz a {
+            padding: 3px;
+        }
+
+        .social-media li {
+            line-height: 0.5;
+        }
+
+            .social-media li a {
+                margin: 0.3rem;
+                padding: 0;
+                font-size: 0.8rem;
+            }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape),
+    only screen and ( min--moz-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape),
+    only screen and ( -o-min-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape),
+    only screen and ( min-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape) {
+        article.bio {
+            margin: 0;
+            padding: 5px 5px;
+            overflow: scroll;
+        }
+
+        #bio-description {
+            width: 100%;
+            float: none;
+            padding: 10% 15%;
+            height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+            line-height: 2rem;
+            top: 20%;
+        }
+
+        #stage {
+            left: 20%;
+        }
+
+        #bio-object {
+            float: none;
+            padding: 5%;
+        }
+
+            #bio-object img {
+                width: 150px;
+                height: 110px;
+            }
+
+        #main-nav {
+            width: 5%;
+            overflow: auto; /*Remove hidden to avoid bottom nav from being hidden*/
+            font-size: 0.6rem;
+        }
+
+        #menu-content ul {
+            width: 90%;
+            left: 8%;
+            position: sticky;
+        }
+
+        div.containerz a {
+            padding: 3px;
+        }
+
+        .social-media li a {
+            margin: 0.3rem;
+            padding: 0;
+            font-size: 0.9rem;
+        }
 }
