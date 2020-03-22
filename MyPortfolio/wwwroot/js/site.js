@@ -92,23 +92,23 @@ $("#menu-button").click(function () {
 });
 
 // toggles flames whenever we hover over menu button
-$("#menu-button").hover(function () {
+//$("#menu-button").hover(function () {
 
-    // only if the length is not an expanded menu bar length we add the flame effect
-    if ("#main-nav".length < 10) {
-        $("#flameBar").delay(2000).addClass("flameBar")
-        $("#flameBar2").delay(2000).addClass("flameBar")
-        $("#flameBar").removeClass("invisible");
-        $("#flameBar2").removeClass("invisible");
-    }
+//    // only if the length is not an expanded menu bar length we add the flame effect
+//    if ("#main-nav".length < 10) {
+//        $("#flameBar").delay(2000).addClass("flameBar")
+//        $("#flameBar2").delay(2000).addClass("flameBar")
+//        $("#flameBar").removeClass("invisible");
+//        $("#flameBar2").removeClass("invisible");
+//    }
 
-    // when we leave we remove flame
-    $("#main-nav").mouseleave(function () {
+//    // when we leave we remove flame
+//    $("#main-nav").mouseleave(function () {
 
-        $("#flameBar").addClass("invisible");
-        $("#flameBar2").addClass("invisible");
-    });
-});
+//        $("#flameBar").addClass("invisible");
+//        $("#flameBar2").addClass("invisible");
+//    });
+//});
 
 $("#scroll").mouseenter(function () {
     $("#scroll").addClass("scroll-up");
