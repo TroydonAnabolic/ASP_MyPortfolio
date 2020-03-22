@@ -446,6 +446,11 @@ article.bio {
     padding: 5%;
 }
 
+#bio-object img {
+    width: 200px;
+    height: 160px;
+}
+
 /* WebKit and Opera browsers */
 @-webkit-keyframes spinner {
     from {
@@ -473,12 +478,12 @@ article.bio {
 }
 
 /* Spinning object */
-#stage {
-    margin: 1em auto;
-    -webkit-perspective: 1200px;
-    -moz-perspective: 1200px;
-    -ms-perspective: 1200px;
-    perspective: 1200px;
+#none {
+    margin: 1em 1em;
+    -webkit-perspective: none;
+    -moz-perspective: none;
+    -ms-perspective: none;
+    perspective: none;
 }
 
 .spinner {
@@ -883,6 +888,8 @@ h1 {
   Responsive Design
    ------------------------------------------------------------------------- */
 
+/*TODO: Look at putting main-nav and other stuff to more generalized max width if possible*/
+
 /*Mobile Devices*/
 
 /* iPhone 6/7/8 plus in portrait */
@@ -890,27 +897,63 @@ h1 {
     article.bio {
         margin: 0;
         padding: 5px 5px;
-        overflow: hidden;
+        overflow: scroll;
     }
 
     #bio-description {
         width: 100%;
         float: none;
         padding: 15% 15%;
-        height: 500px;
+        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
         line-height: 2rem;
         top: 20%;
     }
 
+    #stage {
+        width: 50%;
+    }
+
     #bio-object {
-        width: 40%;
         float: none;
         padding: 5%;
+        position: absolute;
     }
+
+        #bio-object img {
+            width: 150px;
+            height: 110px;
+        }
+
+    #main-nav {
+        width: 6%;
+        font-size: 0.6rem;
+    }
+
+    #menu-content ul {
+        width: 90%;
+        left: 8%;
+        position: sticky;
+    }
+
+    div.containerz a {
+        padding: 3px;
+    }
+
+    .social-media li {
+        line-height: 0.5;
+    }
+
+
+        .social-media li a {
+            margin: 0.3rem;
+            padding: 0;
+            font-size: 0.9rem;
+        }
 }
+
 /* iPhone 6/7/8 plus in landscape */
 @media only screen and (max-device-width : 736px) and (max-device-height : 414px) and (orientation : landscape) { /*TODO: Try adding min and max to avoid anything smaller from causing error*/
-    #bio-object {
-        position: absolute;
+    #main-nav {
+        width: 6%;
     }
 }

@@ -38,8 +38,17 @@ $(".open_close_doors").click(function () {
 });
 
 // When we click the power icon we expand the menu bar to show the menu items 
+var windowSize = $(window).width();
+
 $("#menu-button").click(function () {
-    $("#main-nav").css("width", "7%");
+    //when the screen width is below 414 px width we expan nav bar by 15% instead
+    if (windowSize <= 414) {
+        $("#main-nav").css("width", "15%");
+    }
+    else if (windowSize <= 736) {
+        $("#main-nav").css("width", "10%");
+    }
+    else $("#main-nav").css("width", "7%");
     $("#menu-button").hide("fast");
     $("#logo").css("font-size", "2rem");
     $("#menu-content").removeClass("invisible");
@@ -53,6 +62,10 @@ $("#menu-button").click(function () {
 
     // each time the mouse leaves we shrink the menu bar and show the button again
     $("#main-nav").mouseleave(function () {
+        //when the screen width is below 414 px width we send the nav bar back to normal
+        if (windowSize <= 736) {
+            $("#main-nav").css("width", "6%");
+        } else
         $("#main-nav").css("width", "2%");
         $("#menu-button").show("fast");
         $("#logo").css("font-size", "1rem");
