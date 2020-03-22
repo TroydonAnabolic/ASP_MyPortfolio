@@ -9,7 +9,7 @@ function playAudio(url) {
 // Open and close gate animation
 $(".open_close_doors").click(function () {
 
-     //follow link after 2 seconds after opening the gate
+    //follow link after 2 seconds after opening the gate
     $(function () {
         setTimeout(function () {
             window.location.href = "/Home/Bio";
@@ -38,29 +38,36 @@ $(".open_close_doors").click(function () {
 });
 
 // When we click the power icon we EXPAND the menu bar to show the menu items 
-var windowSize = $(window).width();
-const iPhonXLand = (windowSize <= 812 && window.devicePixelRatio.toFixed(0) == 3), S20ULand = (windowSize <= 941 && window.devicePixelRatio.toFixed(1) == 3.4);
+var windowWidth = $(window).width();
+var windowHeight = $(window).height();
+
+// list devices
+const iPh6_7_8Land = (windowWidth == 736 && windowHeight == 414), iPh6_7_8Potr = (windowWidth == 414 && windowHeight == 736),
+    iPhonXLand = (windowWidth == 812 && window.devicePixelRatio.toFixed(0) == 3), iPhoneXPotr = (windowWidth == 375 && window.devicePixelRatio.toFixed(0) == 3),
+    S7EdLand = (windowWidth == 640 && windowHeight == 360), S7EdPotr = (windowWidth == 360 && windowHeight == 640), 
+    S20ULand = (windowWidth == 941 && windowHeight == 423 && window.devicePixelRatio.toFixed(1) == 3.4), S20UPotrait = windowWidth == 423 && window.devicePixelRatio.toFixed(1) == 3.4;
+
 
 $("#menu-button").click(function () {
     //when the screen width is below 414 px width we expan nav bar by 15% instead
-    if (windowSize <= 414) {
+    if (windowWidth <= 414) {
         $("#main-nav").css("width", "15%");
     }
-    else if (windowSize <= 423 && window.devicePixelRatio.toFixed(1) == 3.4 ) { // if device pixel ratio is 3.4 and window size is 423(S20 potrait)
+    else if (windowWidth <= 423 && window.devicePixelRatio.toFixed(1) == 3.4) { // if device pixel ratio is 3.4 and window size is 423(S20 potrait)
         $("#main-nav").css("width", "15%");
     }
-    else if ((windowSize <= 736) || iPhonXLand) { // window size less than 736 or iphone x landscape
+    else if ((windowWidth <= 736) || iPhonXLand) { // window size less than 736 or iphone x landscape
         $("#main-nav").css("width", "10%");
     }
     else $("#main-nav").css("width", "7%");
     $("#menu-button").hide("fast");
-    if (windowSize <= 736) {
+    if (windowWidth <= 736) {
         $("#logo").css("font-size", "1.2rem");
     }
     else if (S20ULand || iPhonXLand) { // S20 landscape or iPhone X
-            $("#logo").css("font-size", "1.2rem");
+        $("#logo").css("font-size", "1.2rem");
     } else
-    $("#logo").css("font-size", "2rem");
+        $("#logo").css("font-size", "2rem");
     $("#menu-content").removeClass("invisible");
     $("#code-logo").removeClass("invisible");
 
@@ -72,10 +79,10 @@ $("#menu-button").click(function () {
     // each time the mouse leaves we SHRINK the menu bar and show the button again
     $("#main-nav").mouseleave(function () {
         //when the screen width is below 414 px width we send the nav bar back to normal
-        if (windowSize <= 736) {
+        if (windowWidth <= 736) {
             $("#main-nav").css("width", "5%");
         } else
-        $("#main-nav").css("width", "2%");
+            $("#main-nav").css("width", "2%");
         $("#menu-button").show("fast");
         $("#logo").css("font-size", "1rem");
         $("#menu-content").addClass("invisible");
@@ -122,11 +129,42 @@ function showSlides(n) {
     captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
-// Add the photo description over the image when hovered over
-$(".mySlides").mouseenter(function () {
-    $(".image-description").removeClass("invisible");
-    $(".mySlides").mouseleave(function () {
-        $(".image-description").addClass("invisible");
-    });
-});
 
+// when the document loads a page, determine what effect to use for projects depending on device if touch screen or 
+$(document).ready(function () {
+    // if its a touch screen device in potrait we remove invisibility and push the info box down
+    if (S20UPotrait || iPh6_7_8Potr || iPhoneXPotr || S7EdPotr) {
+        $(".image-description").css("top", "120%");
+        $(".image-description").removeClass("invisible");
+    }
+    // if its a touch screen device in potrait we remove invisibility and push the info box down
+    else if (S20ULand || S7EdLand || iPhonXLand || iPh6_7_8Land) {
+        $(".container").css("margin", "3rem");
+        $(".image-description").css("left", "120%");
+        $(".image-description").removeClass("invisible");
+
+    }
+    else
+        // Add the photo description over the image when hovered over
+        $(".mySlides").mouseenter(function () {
+
+
+            $(".image-description").removeClass("invisible");
+            $(".mySlides").mouseleave(function () {
+                $(".image-description").addClass("invisible");
+            });
+        });
+});
+// when the window loads, if it is a touch screen then display info box depending on the slide selected, same for other hover effects
+//$(document).ready(function () {
+//    // hover project image alteration
+//    $(".mySlides").mouseenter(function () {
+//        if (windowWidth <= 423 && window.devicePixelRatio.toFixed(1) == 3.4) {
+//            $(".image-description").removeClass("invisible");
+//        } else
+//            $(".image-description").removeClass("invisible");
+//        $(".mySlides").mouseleave(function () {
+//            $(".image-description").addClass("invisible");
+//        });
+//    });
+//});

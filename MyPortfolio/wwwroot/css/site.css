@@ -925,6 +925,16 @@ h1 {
             height: 110px;
         }
 
+    /*Skills*/
+    h1 {
+        font-size: 4rem;
+    }
+
+    /*Projects*/
+    .container {
+        width: 90%;
+    }
+    /*Nav*/
     #main-nav {
         width: 6%;
         font-size: 0.6rem;
@@ -982,6 +992,7 @@ h1 {
             height: 110px;
         }
 
+    /*Nav*/
     #main-nav {
         width: 5%;
         overflow: auto; /*Remove hidden to avoid bottom nav from being hidden*/
@@ -1005,7 +1016,7 @@ h1 {
     }
 }
 
-/*iPhone X*/
+/*iPhone X potrait*/
 @media
 only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait),
     only screen and ( min--moz-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait),
@@ -1043,6 +1054,17 @@ only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 375p
             height: 110px;
         }
 
+    /*Skills*/
+    h1 {
+        font-size: 4rem;
+    }
+
+    /*Projects*/
+    .container {
+        width: 90%;
+    }
+
+    /*Nav*/
     #main-nav {
         font-size: 0.5rem;
         overflow: auto;
@@ -1070,6 +1092,7 @@ only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 375p
         }
 }
 
+/*iPhone X landscape*/
 @media
 only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape),
     only screen and ( min--moz-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape),
@@ -1190,6 +1213,7 @@ only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 812p
     only screen and ( -o-min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait),
     only screen and ( min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait) {
 
+    /*Bio*/
     /*Makes sure we can scroll down when viewport is too long*/
         article.bio {
             margin: 0;
@@ -1222,6 +1246,17 @@ only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 812p
                 height: 110px;
             }
 
+        /*Skills*/
+        h1 {
+            font-size: 4rem;
+        }
+
+        /*Projects*/
+        .container {
+            width: 90%;
+        }
+
+        /*Nav*/
     #main-nav {
         font-size: 0.6rem;
         overflow: auto;
