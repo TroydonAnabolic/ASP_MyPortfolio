@@ -537,6 +537,22 @@ article.bio {
         box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
     }
 
+aside {
+    position: absolute;
+    left:0;
+    display: inline;
+    background-color: grey;
+    opacity: 0.7;
+    margin: 2rem;
+    margin-left: 0;
+    padding: 1rem;
+    float: none;
+    color: white;
+    text-align: center;
+    border-radius: 20%;
+    max-width: 100%;
+}
+
 /* -------------------------------------------------------------------------
   Skills page
    ------------------------------------------------------------------------- */
@@ -1457,7 +1473,6 @@ only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 94
         margin-left: -8rem;
     }
 
-
     #main-nav {
         width: 5%;
         overflow: auto; /*Remove hidden to avoid bottom nav from being hidden*/
@@ -1480,3 +1495,100 @@ only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 94
         font-size: 0.9rem;
     }
 }
+
+/*Smaller screen width in desktop*/
+
+@media only screen and (max-width: 1484px) and (min-width:1024px) {
+    /*Shrink image size when horizontal screen within this range*/
+    #bio-object img {
+        width: 150px;
+        height: 110px;
+    }
+
+    /*Projects*/
+    .container {
+        width: 100%;
+        overflow: none;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    /*Bio*/
+    /*Makes sure we can scroll down when viewport is too long*/
+    article.bio {
+        margin: 0;
+        padding: 5px 5px;
+        overflow: scroll;
+    }
+
+    #bio-description {
+        width: 100%;
+        float: none;
+        padding: 15% 15%;
+        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        line-height: 2rem;
+        top: 20%;
+    }
+
+    #stage {
+        padding: 5% 30%; /*Pushes the rotating image down so it does not go too close to description and also right so it is centered*/
+    }
+
+    #bio-object {
+        float: none;
+        padding: 5%;
+        position: relative;
+    }
+
+        #bio-object img {
+            width: 150px;
+            height: 110px;
+        }
+
+    /*Contact Form*/
+    #contact form {
+        padding: 2rem 2rem;
+    }
+
+    #form-wrap {
+        margin-left: 2.5rem;
+        margin-bottom: 5rem;
+        width: 250%;
+        margin-left: -8rem;
+    }
+
+    /*Projects*/
+    .container {
+        width: 100%;
+        overflow: none;
+    }
+
+    /*Nav*/
+    #main-nav {
+        font-size: 0.6rem;
+        overflow: auto;
+        width: 3%;
+    }
+
+    #menu-content ul {
+        width: 90%;
+        left: 8%;
+        position: sticky;
+    }
+
+    div.containerz a {
+        padding: 3px;
+    }
+
+    .social-media li {
+        line-height: 0.5;
+    }
+
+        .social-media li a {
+            margin: 0.3rem;
+            padding: 0;
+            font-size: 0.8rem;
+        }
+
+}
+

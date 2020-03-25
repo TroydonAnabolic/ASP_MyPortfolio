@@ -44,7 +44,7 @@ var windowHeight = $(window).height();
 // list devices
 const iPh6_7_8Land = (windowWidth == 736 && windowHeight == 414), iPh6_7_8Potr = (windowWidth == 414 && windowHeight == 736),
     iPhonXLand = (windowWidth == 812 && window.devicePixelRatio.toFixed(0) == 3), iPhoneXPotr = (windowWidth == 375 && window.devicePixelRatio.toFixed(0) == 3),
-    S7EdLand = (windowWidth == 640 && windowHeight == 360), S7EdPotr = (windowWidth == 360 && windowHeight == 640), 
+    S7EdLand = (windowWidth == 640 && windowHeight == 360), S7EdPotr = (windowWidth == 360 && windowHeight == 640),
     S20ULand = (windowWidth == 941 && windowHeight == 423 && window.devicePixelRatio.toFixed(1) == 3.4), S20UPotrait = windowWidth == 423 && window.devicePixelRatio.toFixed(1) == 3.4;
 
 
@@ -59,8 +59,12 @@ $("#menu-button").click(function () {
     else if ((windowWidth <= 736) || iPhonXLand) { // window size less than 736 or iphone x landscape
         $("#main-nav").css("width", "10%");
     }
+    else if (windowWidth > 736 && windowWidth <= 1023) {
+        $("#main-nav").css("width", "8%");
+    }
     else $("#main-nav").css("width", "7%");
     $("#menu-button").hide("fast");
+    // adjust font based on size
     if (windowWidth <= 736) {
         $("#logo").css("font-size", "1.2rem");
     }
@@ -81,7 +85,11 @@ $("#menu-button").click(function () {
         //when the screen width is below 414 px width we send the nav bar back to normal
         if (windowWidth <= 736) {
             $("#main-nav").css("width", "5%");
-        } else
+        }
+        else if (windowWidth > 736 && windowWidth <= 1023) {
+            $("#main-nav").css("width", "3%");
+        }
+        else
             $("#main-nav").css("width", "2%");
         $("#menu-button").show("fast");
         $("#logo").css("font-size", "1rem");
@@ -91,13 +99,19 @@ $("#menu-button").click(function () {
     });
 });
 
-$("#scroll").mouseenter(function () {
-    $("#scroll").addClass("scroll-up");
-    $("#scroll").mouseleave(function () {
-        $("#scroll").removeClass("scroll-up");
+// add the scrolling animation only when screen is above certain size
+$(document).ready(function () {
+
+    $("#scroll").mouseenter(function () {
+        if (windowWidth >= 1024) {
+            $("#scroll").addClass("scroll-up");
+            $("#scroll").mouseleave(function () {
+                $("#scroll").removeClass("scroll-up");
+            });
+        }
+        else if (windowWidth < 1024) $("#scroll").removeClass("scroll-up");
     });
 });
-
 
 //Project slideshow anumation
 var slideIndex = 1;
