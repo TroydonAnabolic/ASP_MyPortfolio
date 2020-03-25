@@ -1512,7 +1512,7 @@ only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 94
     }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1023px) and (min-width: 737px) {
     /*Bio*/
     /*Makes sure we can scroll down when viewport is too long*/
     article.bio {
