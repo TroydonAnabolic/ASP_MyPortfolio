@@ -91,25 +91,6 @@ $("#menu-button").click(function () {
     });
 });
 
-// toggles flames whenever we hover over menu button
-//$("#menu-button").hover(function () {
-
-//    // only if the length is not an expanded menu bar length we add the flame effect
-//    if ("#main-nav".length < 10) {
-//        $("#flameBar").delay(2000).addClass("flameBar")
-//        $("#flameBar2").delay(2000).addClass("flameBar")
-//        $("#flameBar").removeClass("invisible");
-//        $("#flameBar2").removeClass("invisible");
-//    }
-
-//    // when we leave we remove flame
-//    $("#main-nav").mouseleave(function () {
-
-//        $("#flameBar").addClass("invisible");
-//        $("#flameBar2").addClass("invisible");
-//    });
-//});
-
 $("#scroll").mouseenter(function () {
     $("#scroll").addClass("scroll-up");
     $("#scroll").mouseleave(function () {
@@ -174,16 +155,3 @@ $(document).ready(function () {
             });
         });
 });
-// when the window loads, if it is a touch screen then display info box depending on the slide selected, same for other hover effects
-//$(document).ready(function () {
-//    // hover project image alteration
-//    $(".mySlides").mouseenter(function () {
-//        if (windowWidth <= 423 && window.devicePixelRatio.toFixed(1) == 3.4) {
-//            $(".image-description").removeClass("invisible");
-//        } else
-//            $(".image-description").removeClass("invisible");
-//        $(".mySlides").mouseleave(function () {
-//            $(".image-description").addClass("invisible");
-//        });
-//    });
-//});
