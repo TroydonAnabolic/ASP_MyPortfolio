@@ -142,28 +142,42 @@ h1 {
     width: 100%;
 }
 
-/*Add hove effects when hovering over menu bar*/
-.flameBar {
-    /*top: 15%;*/
+#menu-pointer {
+    /*Makes this vertical display writing*/
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    /*Positioning element*/
+    top: 18%;
     width: 100%;
-    height: 29.5%;
-    display: block;
-    /*margin-top: -10%;*/
-    background-image: url(https://media.giphy.com/media/3bc8pP1rVdfgN1uoMV/giphy.gif);
-    background-size: cover;
-    color: transparent;
+    color: #00ffcc;
+    font-size: 1.3rem;
+    padding: .8rem;
+    margin: .5rem;
+    margin-top: 9rem;
+    /*blining effect*/
+    animation: blinkingText 1.2s infinite;
 }
 
-.flameBar2 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 34.6%;
-    display: block;
-    /*margin-top: -10%;*/
-    background-image: url(https://media.giphy.com/media/3bc8pP1rVdfgN1uoMV/giphy.gif);
-    background-size: cover;
-    color: transparent;
+@keyframes blinkingText {
+    0% {
+        color: #00ffcc;
+    }
+
+    49% {
+        color: #00ffcc;
+    }
+
+    60% {
+        color: transparent;
+    }
+
+    99% {
+        color: transparent;
+    }
+
+    100% {
+        color: #00ffcc;
+    }
 }
 
 #logo {
@@ -202,6 +216,7 @@ div.containerz a {
     border: 1px solid grey;
     box-shadow: 1px 1px inherit;
     border-radius: 10%;
+    font-size: 1rem;
 }
 
 #menu-content ul {
@@ -226,6 +241,7 @@ div.containerz a {
 
         .social-media li a {
             margin: 0 0.5rem;
+            font-size: 0.8rem;
         }
 
 /* Circle behind */
@@ -539,7 +555,7 @@ article.bio {
 
 aside {
     position: absolute;
-    left:0;
+    left: 0;
     display: inline;
     background-color: grey;
     opacity: 0.7;
@@ -563,7 +579,7 @@ aside {
     position: absolute;
     opacity: 0.5;
     width: 100%;
-    height: 100%;
+    max-height: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -579,7 +595,7 @@ aside {
     position: absolute;
     top: -450px;
     color: #00ffff;
-    opacity: .5;
+    opacity: .2;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Orbitron';
@@ -934,6 +950,13 @@ h1 {
 
 /* iPhone 6/7/8 plus in portrait */
 @media only screen and (max-device-width : 414px) and (max-device-height : 736px) and (orientation : portrait) { /*TODO: Try adding min and max to avoid anything smaller from causing error*/
+
+    .open_close_doors {
+        top: 15%;
+        left: 10%;
+        font-size: 2rem;
+    }
+
     /*Reduce padding and margin so it takes out screen size more*/
     article.bio {
         margin: 0;
@@ -945,9 +968,11 @@ h1 {
         width: 100%;
         float: none;
         padding: 10% 15%;
-        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        max-height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
         line-height: 2rem;
         top: 20%;
+        margin: 1rem 0;
+        overflow: scroll; /*Enable scroll so it does not get hidden*/
     }
 
     #stage {
@@ -1015,6 +1040,13 @@ h1 {
             padding: 0;
             font-size: 0.9rem;
         }
+
+
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        margin-top: 2rem;
+    }
 }
 
 /* iPhone 6/7/8 plus in landscape */
@@ -1035,10 +1067,12 @@ h1 {
     #bio-description {
         width: 100%;
         float: none;
-        padding: 15% 15%;
-        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
         line-height: 2rem;
         top: 20%;
+        max-height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        overflow: scroll;
+        margin: 1rem 0;
+        padding: 0 15% 50%; /*enables no padding at top but puts padding at the bottom to allow scroll all the way to the bottom*/
     }
 
     #stage {
@@ -1089,10 +1123,28 @@ h1 {
         padding: 0;
         font-size: 0.9rem;
     }
+
+    /*Decrease the font size and move the menu word and move the button down*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    #menu-button {
+        top: 80%;
+    }
 }
 
 /*iPhone X potrait*/
 @media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait), only screen and ( min--moz-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait), only screen and ( -o-min-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait), only screen and ( min-device-pixel-ratio: 3) and (max-device-width : 375px) and (max-device-height : 812px) and (orientation : portrait) {
+
+    .open_close_doors {
+        top: 15%;
+        left: 10%;
+        font-size: 2rem;
+    }
 
     /*Makes sure we can scroll down when viewport is too long*/
     article.bio {
@@ -1105,9 +1157,10 @@ h1 {
         width: 100%;
         float: none;
         padding: 15% 15%;
-        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        max-height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
         line-height: 2rem;
         top: 20%;
+        overflow: scroll;
     }
 
     #stage {
@@ -1170,12 +1223,18 @@ h1 {
         .social-media li a {
             margin: 0.3rem;
             padding: 0;
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
+    /*Decrease menu pointer size*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        margin-top: 4rem;
+    }
 }
 
 /*iPhone X landscape*/
-@media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape), only screen and ( min--moz-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape), only screen and ( -o-min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape), only screen and ( min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape) {
+@media only screen and (-webkit-min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape) and (min-device-width : 811px) and (min-device-height : 374px), only screen and ( min--moz-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape) and (min-device-width : 811px) and (min-device-height : 374px), only screen and ( -o-min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape) and (min-device-width : 811px) and (min-device-height : 374px), only screen and ( min-device-pixel-ratio: 3) and (max-device-width : 812px) and (max-device-height : 375px) and (orientation : landscape) and (min-device-width : 811px) and (min-device-height : 374px) {
 
     /*Home page*/
     .open_close_doors {
@@ -1192,10 +1251,12 @@ h1 {
     #bio-description {
         width: 100%;
         float: none;
-        padding: 10% 15%;
-        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
         line-height: 2rem;
         top: 20%;
+        max-height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        overflow: scroll;
+        margin: 1rem 0;
+        padding: 0 15% 50%; /*enables no padding at top but puts padding at the bottom to allow scroll all the way to the bottom*/
     }
 
     #stage {
@@ -1245,12 +1306,31 @@ h1 {
         padding: 0;
         font-size: 0.9rem;
     }
+
+    /*Decrease the font size and move the menu word and move the button down*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        padding: 1rem;
+        margin-top: 0.6rem;
+    }
+
+    #menu-button {
+        top: 90%;
+    }
 }
 
 
 
 /*S7 Edge Potrait*/
-@media only screen and (max-device-width : 360px) and (max-device-height : 640px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 4) {
+@media only screen and (-webkit-min-device-pixel-ratio: 4) and (max-device-width : 360px) and (max-device-height : 640px) and (orientation : portrait) and (min-device-width : 359px) and (min-device-height : 639px), only screen and ( min--moz-device-pixel-ratio: 4) and (max-device-width : 360px) and (max-device-height : 640px) and (orientation : portrait) and (min-device-width : 359px) and (min-device-height : 639px), only screen and ( -o-min-device-pixel-ratio: 4) and (max-device-width : 360px) and (max-device-height : 640px) and (orientation : portrait) and (min-device-width : 359px) and (min-device-height : 639px), only screen and ( min-device-pixel-ratio: 4) and (max-device-width : 360px) and (max-device-height : 640px) and (orientation : portrait) (min-device-width : 359px) and (min-device-height : 639px) {
+
+    .open_close_doors {
+        top: 10%;
+        left: 10%;
+        font-size: 2rem;
+    }
+
     #main-nav {
         font-size: 0.5rem;
         overflow: auto;
@@ -1283,12 +1363,17 @@ h1 {
         padding: 0;
         font-size: 0.8rem;
     }
+
+    /*Decrease menu button size*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        margin-top: 0rem;
+    }
 }
 
 /*S7 Edge landscape*/
-@media
-only screen and (max-device-width : 640px) and (max-device-height : 360px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 4)
-and (min-device-width : 639px) and (min-device-height : 359px) {
+@media only screen and (max-device-width : 640px) and (max-device-height : 360px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 4) and (min-device-width : 639px) and (min-device-height : 359px) {
 
     /*Home page*/
     .open_close_doors {
@@ -1297,7 +1382,10 @@ and (min-device-width : 639px) and (min-device-height : 359px) {
     }
 
     #bio-description {
-        padding: 10% 15%;
+        max-height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        overflow: scroll;
+        margin: 1rem 0;
+        padding: 0 15% 50%; /*enables no padding at top but puts padding at the bottom to allow scroll all the way to the bottom*/
     }
 
     /*Contact Form*/
@@ -1334,10 +1422,194 @@ and (min-device-width : 639px) and (min-device-height : 359px) {
         padding: 0;
         font-size: 0.8rem;
     }
+
+    /*Decrease the font size and move the menu word and move the button down*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        padding: 1rem;
+        margin-top: 0rem;
+    }
+
+    #menu-button {
+        top: 85%;
+    }
+}
+
+/* Samsung Galaxy A8 Potrait */
+@media only screen and (-webkit-min-device-pixel-ratio: 2.9) and (max-device-width : 372px) and (max-device-height : 766px) and (orientation : portrait) and (min-device-width : 371px) and (min-device-height : 765px), only screen and ( min--moz-device-pixel-ratio: 2.9) and (max-device-width : 372px) and (max-device-height : 766px) and (orientation : portrait) and (min-device-width : 371px) and (min-device-height : 765px), only screen and ( -o-min-device-pixel-ratio: 2.9) and (max-device-width : 372px) and (max-device-height : 766px) and (orientation : portrait) and (min-device-width : 371px) and (min-device-height : 765px), only screen and ( min-device-pixel-ratio: 2.9) and (max-device-width : 372px) and (max-device-height : 766px) and (orientation : portrait) (min-device-width : 371px) and (min-device-height : 765px) { /*TODO: Try adding min and max to avoid anything smaller from causing error*/
+
+    .open_close_doors {
+        top: 10%;
+        left: 4%;
+        font-size: 2rem;
+    }
+
+    /*Reduce padding and margin so it takes out screen size more*/
+    article.bio {
+        margin: 0;
+        padding: 5px 5px;
+        overflow: scroll;
+    }
+    /*Makes sure we can scroll down when viewport is too long*/
+    article.bio {
+        margin: 0;
+        padding: 5px 5px;
+        overflow: scroll;
+    }
+
+    #bio-description {
+        width: 100%;
+        float: none;
+        padding: 15% 15%;
+        max-height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        line-height: 2rem;
+        top: 20%;
+        overflow: scroll;
+    }
+
+    #stage {
+        padding: 10% 0; /*Pushes the rotating image down so it does not go too close to description*/
+    }
+
+    #bio-object {
+        float: none;
+        padding: 5%;
+        position: relative;
+    }
+
+        #bio-object img {
+            width: 150px;
+            height: 110px;
+        }
+
+    /*Skills*/
+    h1 {
+        font-size: 4rem;
+    }
+
+    /*Projects*/
+    .container {
+        width: 90%;
+    }
+
+    /*Contact Form*/
+    #contact form {
+        padding: 2rem 2rem;
+    }
+
+    #form-wrap {
+        margin-left: 1.5rem;
+        margin-bottom: 5rem;
+    }
+
+
+    /*Nav*/
+    #main-nav {
+        font-size: 0.5rem;
+        overflow: auto;
+        width: 6%;
+    }
+
+    #menu-content ul {
+        width: 90%;
+        left: 8%;
+        position: sticky;
+    }
+
+    div.containerz a {
+        padding: 3px;
+        
+    }
+
+    .social-media li {
+        line-height: 0.5;
+    }
+        /*TODO: look into changing this font as a query for all media devices with these values*/
+        .social-media li a {
+            margin: 0.3rem;
+            padding: 0;
+            font-size: 1rem;
+        }
+
+    /*Decrease menu button size*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        margin-top: 3rem;
+    }
+}
+
+/*Samsung Galaxy A8 landscape*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2.9) and (max-device-width : 766px) and (max-device-height : 372px) and (orientation : landscape) and (min-device-width : 765px) and (min-device-height : 371px), only screen and ( min--moz-device-pixel-ratio: 2.9) and (max-device-width : 766px) and (max-device-height : 372px) and (orientation : landscape) and (min-device-width : 765px) and (min-device-height : 371px), only screen and ( -o-min-device-pixel-ratio: 2.9) and (max-device-width : 766px) and (max-device-height : 372px) and (orientation : landscape) and (min-device-width : 765px) and (min-device-height : 371px), only screen and ( min-device-pixel-ratio: 2.9) and (max-device-width : 766px) and (max-device-height : 372px) and (orientation : landscape) (min-device-width : 765px) and (min-device-height : 371px) {
+
+    /*Home page*/
+    .open_close_doors {
+        top: 15%;
+        left: 3%;
+    }
+
+    #bio-description {
+        width: 100%;
+        float: none;
+        line-height: 2rem;
+        top: 20%;
+        max-height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        overflow: scroll;
+        margin: 1rem 0;
+        padding: 0 15% 50%; /*enables no padding at top but puts padding at the bottom to allow scroll all the way to the bottom*/
+    }
+
+    /*Contact Form*/
+    #contact form {
+        padding: 2rem 2rem;
+    }
+
+    #form-wrap {
+        margin-left: 2.5rem;
+        margin-bottom: 5rem;
+        width: 250%;
+        margin-left: -8rem;
+    }
+
+
+    #main-nav {
+        width: 5%;
+        overflow: auto; /*Remove hidden to avoid bottom nav from being hidden*/
+        font-size: 0.6rem;
+    }
+
+    #menu-content ul {
+        width: 90%;
+        left: 8%;
+        position: sticky;
+    }
+
+    div.containerz a {
+        padding: 3px;
+    }
+
+    .social-media li a {
+        margin: 0.3rem;
+        padding: 0;
+        font-size: 0.8rem;
+    }
+
+    /*Decrease the font size and move the menu word and move the button down*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        padding: 1rem;
+        margin-top: 0rem;
+    }
+
+    #menu-button {
+        top: 80%;
+    }
 }
 
 /*S20 Ultra 5G Potrait*/
-@media only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait), only screen and ( min--moz-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait), only screen and ( -o-min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait), only screen and ( min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait) {
+@media only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait) and (min-device-width : 422px) and (min-device-height : 940px), only screen and ( min--moz-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait)and (min-device-width : 422px) and (min-device-height : 940px), only screen and ( -o-min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait) and (min-device-width : 422px) and (min-device-height : 940px), only screen and ( min-device-pixel-ratio: 3.4) and (max-device-width : 423px) and (max-device-height : 941px) and (orientation : portrait) and (min-device-width : 422px) and (min-device-height : 940px) {
 
     /*Bio*/
     /*Makes sure we can scroll down when viewport is too long*/
@@ -1354,6 +1626,7 @@ and (min-device-width : 639px) and (min-device-height : 359px) {
         height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
         line-height: 2rem;
         top: 20%;
+        overflow: scroll;
     }
 
     #stage {
@@ -1418,18 +1691,21 @@ and (min-device-width : 639px) and (min-device-height : 359px) {
             padding: 0;
             font-size: 0.8rem;
         }
+
+    /*Decrease menu button size*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        margin-top: 9rem;
+    }
 }
 
 /*S20 Landscape*/
-@media
-only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape) and (min-device-width : 940px) and (min-device-height : 422px),
-    only screen and ( min--moz-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape) and (min-device-width : 940px) and (min-device-height : 422px),
-    only screen and ( -o-min-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape) and (min-device-width : 940px) and (min-device-height : 422px),
-    only screen and ( min-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape) (min-device-width : 940px) and (min-device-height : 422px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape) and (min-device-width : 940px) and (min-device-height : 422px), only screen and ( min--moz-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape) and (min-device-width : 940px) and (min-device-height : 422px), only screen and ( -o-min-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape) and (min-device-width : 940px) and (min-device-height : 422px), only screen and ( min-device-pixel-ratio: 3.4) and (max-device-width : 941px) and (max-device-height : 423px) and (orientation : landscape) and (min-device-width : 940px) and (min-device-height : 422px) {
     /*Home page*/
     .open_close_doors {
-        top: 20%; 
-        left: 15%;422px
+        top: 20%;
+        left: 15%;
     }
 
     article.bio {
@@ -1441,10 +1717,12 @@ only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 94
     #bio-description {
         width: 100%;
         float: none;
-        padding: 10% 15%;
-        height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
         line-height: 2rem;
         top: 20%;
+        max-height: 100%; /* This changes it so that it does not allow box to be pushed off screen*/
+        overflow: scroll;
+        margin: 1rem 0;
+        padding: 0 15% 30%; /*enables no padding at top but puts padding at the bottom to allow scroll all the way to the bottom*/
     }
 
     #stage {
@@ -1494,11 +1772,23 @@ only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 94
         padding: 0;
         font-size: 0.9rem;
     }
+
+    /*Decrease the font size and move the menu word and move the button down*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    #menu-button {
+        top: 75%;
+    }
 }
 
 /*Smaller screen width in desktop*/
 
-@media only screen and (max-width: 1484px) and (min-width:1024px) {
+@media only screen and (max-width: 1484px) and (min-width:1024px) and (min-height: 1800px) {
     /*Shrink image size when horizontal screen within this range*/
     #bio-object img {
         width: 150px;
@@ -1512,7 +1802,7 @@ only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 94
     }
 }
 
-@media only screen and (max-width: 1023px) and (min-width: 737px) {
+@media only screen and (max-width: 1023px) and (min-width: 737px) and (min-height: 813px) {
     /*Bio*/
     /*Makes sure we can scroll down when viewport is too long*/
     article.bio {
@@ -1590,5 +1880,15 @@ only screen and (-webkit-min-device-pixel-ratio: 3.4) and (max-device-width : 94
             font-size: 0.8rem;
         }
 
-}
+    /*Decrease the font size and move the menu word and move the button down*/
+    #menu-pointer {
+        font-size: 1rem;
+        top: 10%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
 
+    #menu-button {
+        top: 75%;
+    }
+}

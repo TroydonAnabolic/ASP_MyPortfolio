@@ -6,8 +6,8 @@ function playAudio(url) {
     new Audio(url).play();
 }
 
-// Open and close gate animation
-$(".open_close_doors").click(function () {
+// Open and close gate animation when the gate or my title is clicked
+$(".open_close_doors, #leftdoor_inner, #rightdoor_inner").click(function () {
 
     //follow link after 2 seconds after opening the gate
     $(function () {
@@ -45,25 +45,28 @@ var windowHeight = $(window).height();
 const iPh6_7_8Land = (windowWidth == 736 && windowHeight == 414), iPh6_7_8Potr = (windowWidth == 414 && windowHeight == 736),
     iPhonXLand = (windowWidth == 812 && window.devicePixelRatio.toFixed(0) == 3), iPhoneXPotr = (windowWidth == 375 && window.devicePixelRatio.toFixed(0) == 3),
     S7EdLand = (windowWidth == 640 && windowHeight == 360), S7EdPotr = (windowWidth == 360 && windowHeight == 640),
+    A20Land = (windowWidth == 640 && windowHeight == 360), A20Potr = (windowWidth == 360 && windowHeight == 640),
     S20ULand = (windowWidth == 941 && windowHeight == 423 && window.devicePixelRatio.toFixed(1) == 3.4), S20UPotrait = windowWidth == 423 && window.devicePixelRatio.toFixed(1) == 3.4;
 
 
 $("#menu-button").click(function () {
     //when the screen width is below 414 px width we expan nav bar by 15% instead
     if (windowWidth <= 414) {
-        $("#main-nav").css("width", "15%");
+        $("#main-nav").css("width", "25%");
     }
-    else if (windowWidth <= 423 && window.devicePixelRatio.toFixed(1) == 3.4) { // if device pixel ratio is 3.4 and window size is 423(S20 potrait)
-        $("#main-nav").css("width", "15%");
+    else if (S20UPotrait) { // if device pixel ratio is 3.4 and window size is 423(S20 potrait)
+        $("#main-nav").css("width", "25%");
     }
     else if ((windowWidth <= 736) || iPhonXLand) { // window size less than 736 or iphone x landscape
-        $("#main-nav").css("width", "10%");
+        $("#main-nav").css("width", "15%");
     }
     else if (windowWidth > 736 && windowWidth <= 1023) {
         $("#main-nav").css("width", "8%");
     }
     else $("#main-nav").css("width", "7%");
+    // now make the mouse button and menu letters disappear and increase the font size as the menu expands
     $("#menu-button").hide("fast");
+    $("#menu-pointer").hide("fast");
     // adjust font based on size
     if (windowWidth <= 736) {
         $("#logo").css("font-size", "1.2rem");
