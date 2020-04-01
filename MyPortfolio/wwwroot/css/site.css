@@ -128,10 +128,10 @@ h1 {
 }
 
 #menu-button {
-    background: url('https://lh3.googleusercontent.com/8QSps4_1FJzx-IT-MTTCEFu_mTYszQmX7JJ18TYHaJG8fpRisG7M-LrAUcM9QE5GUO0kYCPxWobzslj6NKMZFBXbMNOYzsuhOI-_o_f1clTGkYjOucGznNt2kMini6mYm5q4vMckaw');
+    /*background: url('https://lh3.googleusercontent.com/8QSps4_1FJzx-IT-MTTCEFu_mTYszQmX7JJ18TYHaJG8fpRisG7M-LrAUcM9QE5GUO0kYCPxWobzslj6NKMZFBXbMNOYzsuhOI-_o_f1clTGkYjOucGznNt2kMini6mYm5q4vMckaw');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;*/
     border: 1px solid #00ffcc;
     display: block;
     text-align: center;
@@ -140,7 +140,18 @@ h1 {
     top: 50%;
     margin-top: -120px;
     width: 100%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: #00ffcc;
+    font-size: 1.3rem;
 }
+
+    #menu-button span {
+        text-align: center;
+        position: absolute;
+        left: 10%;
+        top: 30%;
+    }
 
 #menu-pointer {
     /*Makes this vertical display writing*/
@@ -670,7 +681,7 @@ img {
 /* Slide Description*/
 .image-description {
     background-color: grey;
-    opacity: 0.6;
+    opacity: 0.8;
     padding: 2%;
     position: absolute;
     left: 10%;
