@@ -107,9 +107,9 @@ $(document).ready(function () {
 
     $("#scroll").mouseenter(function () {
         if (windowWidth >= 1024) {
-            $("#scroll").addClass("scroll-up");
+            $("#scroll").removeClass("scroll-up");
             $("#scroll").mouseleave(function () {
-                $("#scroll").removeClass("scroll-up");
+                $("#scroll").addClass("scroll-up");
             });
         }
         else if (windowWidth < 1024) $("#scroll").removeClass("scroll-up");
