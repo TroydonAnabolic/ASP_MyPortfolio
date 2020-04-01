@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -41,6 +42,8 @@ namespace MyPortfolio
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseStaticFiles(GetStaticFileConfiguration());
+
 
             app.UseRouting();
 
@@ -52,6 +55,13 @@ namespace MyPortfolio
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+        // method to enable adding other downloadable extensions to website
+        private StaticFileOptions GetStaticFileConfiguration()
+        {
+            var provider = new FileExtensionContentTypeProvider();
+            provider.Mappings[".7z"] = "application/octect-stream";
+            return new StaticFileOptions { ContentTypeProvider = provider };
         }
     }
 }

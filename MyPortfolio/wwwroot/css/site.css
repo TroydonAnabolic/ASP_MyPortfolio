@@ -153,7 +153,7 @@ h1 {
     font-size: 1.3rem;
     padding: .8rem;
     margin: .5rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
     /*blining effect*/
     animation: blinkingText 1.2s infinite;
 }
@@ -692,10 +692,16 @@ img {
     font-family: inherit;
     font-size: 1rem;
     overflow-wrap: break-word;
+    text-decoration: none;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
+    .mySlides a:nth-child(2) {
+        text-decoration: underline;
+        background-color: black;
+    }
+
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
     cursor: pointer;
 }
 
@@ -779,11 +785,12 @@ img {
         opacity: 1;
     }
 
-
+/*.download-projects {
+    text-align: center;
+}*/
 /* -------------------------------------------------------------------------
   Contacts page
    ------------------------------------------------------------------------- */
-
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section, ma {
     display: block;
     position: relative;
