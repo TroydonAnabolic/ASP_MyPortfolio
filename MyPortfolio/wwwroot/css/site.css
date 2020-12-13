@@ -108,6 +108,8 @@ h1 {
         max-width: fit-content;
     }
 
+
+
 /* -------------------------------------------------------------------------
    Header/Main navigation
    ------------------------------------------------------------------------- */
@@ -711,8 +713,8 @@ img {
         background-color: black;
     }
 
-    /* Add a pointer when hovering over the thumbnail images */
-    .cursor {
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
     cursor: pointer;
 }
 
@@ -796,6 +798,13 @@ img {
         opacity: 1;
     }
 
+.project-title, .project-description {
+    padding: 1rem;
+}
+
+.project-container {
+    padding: 2rem 5rem;
+}
 /*.download-projects {
     text-align: center;
 }*/
@@ -1537,7 +1546,6 @@ h1 {
 
     div.containerz a {
         padding: 3px;
-        
     }
 
     .social-media li {
